@@ -1,4 +1,4 @@
-.header-container {
+.header-ctn {
   font-family: "Poppins", sans-serif;
   width: 100%;
   height: 100px;
@@ -42,7 +42,7 @@
 }
 
 @media(max-width: 1440px) {
-  .header-container {
+  .header-ctn {
     justify-content: space-between;
   }
   .header-middle-section {

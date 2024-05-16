@@ -1,4 +1,7 @@
-.thumbnail-container {
+/*-------------------*/
+/* THUMBNAIL SECTION */
+/*-------------------*/
+.thumbnail-ctn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,19 +11,20 @@
   background-color: #fbebb5;
 }
 
-.thumbnail-title-container {
+.thumbnail-title-ctn {
+  display: inline-block;
   width: 440px;
   margin-right: -55px;
   margin-left: 250px;
 }
 
-.thumbnail-title-container p {
-  font-size: 64;
+.thumbnail-title-ctn p {
+  font-size: 4rem;
   font-weight: 500;
   padding-bottom: 35px;
 }
 
-.thumbnail-title-container a {
+.thumbnail-title-ctn a {
   font-size: 24;
   font-weight: 500;
   color: #000000;
@@ -29,44 +33,56 @@
 }
 
 .thumbnail-image {
+  max-width: 100%; 
+  object-fit: contain;
   height: 1000px;
+  overflow: hidden;
 }
 
-.sidetable-section-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 37px;
-  background-color: #FAF4F4;
-  height: 672px;
-  padding-left: 100px;
-  padding-right: 93px;
-}
-
-.sidetable-container {
+/*--------------------*/
+/* SIDE TABLE SECTION */
+/*--------------------*/
+.sidetable-section-ctn {
   display: flex;
+  column-gap: 37px;
+  justify-content: center;
+  row-gap: 51px;
+  background-color: #FAF4F4;
+  padding: 51px 100px 59px 100px;
+  max-height: 672px;
+}
+
+.sidetable-ctn {
   position: relative;
-  flex-direction: column;
-  margin-top: 51px;
-  height: 562px;
+  min-width: 605px;
+  min-height: 562px;
 }
 
 .sidetable-title {
   position: absolute;
   bottom: 50px;
-  left: 100px;
+  left: 100px
 }
 
 .sidetable-title p {
-  font-size: 36;
+  font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 23px;
 }
 
 .sidetable-title a {
   color: black;
-  font-size: 24;
+  font-size: 1rem;
   font-weight: 500;
   border-bottom: 0.15rem solid black;
   padding-bottom: 13px;
 }
 
+.sidetable-img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/*------------------*/
+/* TOP PICK SECTION */
+/*------------------*/
