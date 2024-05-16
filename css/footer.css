@@ -43,6 +43,7 @@
   flex-direction: row;
   align-items: center;
   color: #9F9F9F;
+  max-width: 285px;
 }
 
 .address-section p {
@@ -50,29 +51,22 @@
   font-weight: 300;
 }
 
-#email-input {
-  border-style: none;
-  border-bottom: 0.15rem solid black;
-}
-
 .newsletter-section div {
   width: 300px;
   margin-right: 100px;
 }
 
-#email-input {
+input[type="text"] {
   width: 200px;
+  border-style: none;
+  border-bottom: 0.15rem solid black;
 }
 
-#email-input::placeholder {
+input[type="text"]::placeholder {
   font-size: 0.875rem;
 }
-
-#email-input:focus {
-  border-style: none;
-  border-color: red;
-  margin: 0;
-  padding: 0;
+input[type="text"]:focus {
+  outline: none;
 }
 
 .subscribe-btn {
