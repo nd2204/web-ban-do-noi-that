@@ -7,6 +7,7 @@ footer_template.innerHTML = `
     }
 
     footer {
+      overflow: hidden;
       padding: 98px 100px 38px;
     }
 
@@ -18,7 +19,7 @@ footer_template.innerHTML = `
       font-size: 1rem;
     }
 
-    .footer-section p {
+    .section p {
       font-size: 1rem;
       color: #9F9F9F;
       font-weight: 500;
@@ -32,7 +33,7 @@ footer_template.innerHTML = `
       align-items: start;
     }
 
-    .footer-section {
+    .section {
       display: flex;
       flex-direction: column;
       justify-content: left;
@@ -40,7 +41,7 @@ footer_template.innerHTML = `
       min-height: 312px;
     }
 
-    .footer-section a {
+    .section a {
       font-size: 1rem;
       font-weight: 500;
       color: black;
@@ -59,7 +60,7 @@ footer_template.innerHTML = `
       font-weight: 300;
     }
 
-    .newsletter-section div {
+    .newsletter-section form {
       width: 300px;
       margin-right: 100px;
     }
@@ -67,53 +68,59 @@ footer_template.innerHTML = `
     input[type="text"] {
       width: 200px;
       border-style: none;
-      border-bottom: 0.15rem solid black;
+      border-bottom: 0.1rem solid black;
+      padding-bottom: 4px;
+      vertical-align: top;
     }
 
     input[type="text"]::placeholder {
-      font-size: 0.875rem;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #9F9F9F;
     }
+
     input[type="text"]:focus {
       outline: none;
     }
 
-    .subscribe-btn {
+    button[type="submit"] {
       font-size: 0.875rem;
       font-weight: 500;
-      height: 24px;
       border-style: none;
-      border-bottom: 0.15rem solid black;
+      border-bottom: 0.1rem solid black;
       background-color: #00000000;
       padding: 0;
       cursor: pointer;
       margin-left: 10px;
-      padding-bottom: 2px;
+      padding-bottom: 4px;
+      vertical-align: top;
     }
-  </style>
+    </style>
   <footer>
     <div class="footer-sections-ctn">
-      <div class="footer-section address-section">
+      <div class="section address-section">
         <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
       </div> 
-      <div class="footer-section links-section">
+      <div class="section links-section">
         <p>Links</p>
-        <a href="./index.html">Home</a>
-        <a href="./shop.html">Shop</a>
-        <a href="./about.html">About</a>
-        <a href="./contact.html">Contact</a>
+        <a href="/">Home</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
       </div> 
-      <div class="footer-section help-section">
+      <div class="section help-section">
         <p>Help</p>
         <a href="#">Payment Options</a>
         <a href="#">Returns</a>
         <a href="#">Privacy Policies</a>
       </div> 
-      <div class="footer-section newsletter-section">
+      <div class="section newsletter-section">
         <p>Newsletter</p>
-        <div>
+        <form class="form-subscription">
           <input id="email-input" type="text" name="email" placeholder="Enter Your Email Address">
-          <button class="subscribe-btn">SUBSCRIBE</button>
-        </div>
+          <button id="subscribe-btn" type="submit">SUBSCRIBE</button>
+          <form>
       </div> 
     </div>
     <hr>

@@ -15,6 +15,7 @@ header_template.innerHTML = `
     align-items: center;
     background-color: rgba(255, 255, 255, 0);
     z-index: 1000;
+    overflow: hidden;
   }
 
   .middle-section {
@@ -49,15 +50,15 @@ header_template.innerHTML = `
     cursor: pointer;
   }
 
-  @media(max-width: 1000px) {
-    .header-ctn {
+  @media (max-width: 1200px) {
+    header {
       justify-content: space-between;
     }
-    .header-middle-section {
+    .middle-section {
       margin-left: 100px;
       margin-right: 100px;
     }
-    .header-right-section {
+    .right-section {
       display: flex;
       position: static;
       margin-right: 100px;
@@ -66,10 +67,10 @@ header_template.innerHTML = `
   </style>
   <header>
     <div class="middle-section">
-      <a href="#">Home</a>
-      <a href="./shop.html">Shop</a>
-      <a href="./about.html">About</a>
-      <a href="./contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
     </div>
     <div class="right-section">
       <button onclick="alert('button clicked')"><img class="account-alert-icon" src="assets/icons/account_alert.svg"></button>
