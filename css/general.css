@@ -2,6 +2,7 @@
 
 * {
   font-family: Poppins, sans-serif;
+  color: black;
 }
 
 body {
@@ -23,3 +24,21 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+
+.txt-s-16 { font-size: 16px; }
+.txt-s-20 { font-size: 20px; }
+.txt-s-24 { font-size: 24px; }
+.txt-s-36 { font-size: 36px; }
+.txt-s-64 { font-size: 64px; }
+
+.txt-w-100 { font-weight: 100; }
+.txt-w-200 { font-weight: 200; }
+.txt-w-300 { font-weight: 300; }
+.txt-w-400 { font-weight: 400; }
+.txt-w-500 { font-weight: 500; }
+.txt-w-600 { font-weight: 600; }
+.txt-w-700 { font-weight: 700; }
+.txt-w-800 { font-weight: 800; }
+.txt-w-900 { font-weight: 900; }
+
+.txt-caption { color: #9F9F9F; }

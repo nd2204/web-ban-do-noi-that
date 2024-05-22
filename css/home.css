@@ -1,3 +1,11 @@
+.view-more-btn {
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+  border-bottom: 0.15rem solid black;
+  padding-bottom: 13px;
+}
+
 /*-------------------*/
 /* THUMBNAIL SECTION */
 /*-------------------*/
@@ -12,10 +20,9 @@
 }
 
 .thumbnail-title-ctn {
-  display: inline-block;
   width: 440px;
-  margin-right: -55px;
-  margin-left: 250px;
+  margin-left: 100px;
+  margin-right: 25px;
 }
 
 .thumbnail-title-ctn p {
@@ -24,18 +31,16 @@
   padding-bottom: 35px;
 }
 
-.thumbnail-title-ctn a {
-  font-size: 24;
+.thumbnail-title-ctn .view-more-btn {
+  font-size: 24px;
   font-weight: 500;
   color: #000000;
   border-bottom: 0.2rem solid #000000;
-  padding-bottom: 13px;
 }
 
 .thumbnail-image {
   max-width: 100%; 
   object-fit: contain;
-  height: 1000px;
   overflow: hidden;
 }
 
@@ -46,43 +51,54 @@
   display: flex;
   column-gap: 37px;
   justify-content: center;
+  align-items: center;
   row-gap: 51px;
   background-color: #FAF4F4;
-  padding: 51px 100px 59px 100px;
-  max-height: 672px;
+  padding: 51px 93px 59px 100px;
+  height: 562px;
 }
 
 .sidetable-ctn {
   position: relative;
-  min-width: 605px;
-  min-height: 562px;
+  max-width: 605px;
 }
 
 .sidetable-title {
-  position: absolute;
-  bottom: 50px;
-  left: 100px
+  padding-left: 15%;
 }
 
 .sidetable-title p {
-  font-size: 2.25rem;
+  font-size: 2.25em;
   font-weight: 500;
   margin-bottom: 23px;
-}
-
-.sidetable-title a {
-  color: black;
-  font-size: 1rem;
-  font-weight: 500;
-  border-bottom: 0.15rem solid black;
-  padding-bottom: 13px;
-}
-
-.sidetable-img {
-  max-width: 100%;
-  object-fit: contain;
 }
 
 /*------------------*/
 /* TOP PICK SECTION */
 /*------------------*/
+
+.toppick-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 777px;
+}
+
+.toppick-title {
+  margin-top: 55px; 
+  font-style: normal;
+  line-height: 54px;
+}
+
+.toppick-caption {
+  margin-top: 13px; 
+  margin-bottom: 65px;
+  line-height: 24px;
+  color: #9F9F9F;
+}
+
+.toppick-ctn a {
+  margin: 70px 0px;
+  /* View More */
+  line-height: 30px;
+}

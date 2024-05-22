@@ -3,7 +3,8 @@
 ### Đề tài: Website bán đồ nội thất chất lượng
 
 ![GitHub License](https://img.shields.io/github/license/nd2204/web-ban-do-noi-that?label=Gi%E1%BA%A5y%20Ph%C3%A9p&color=%23b8bb26)
-![Website](https://img.shields.io/website?url=https://d17cnpm2/nhom8/public/home.html)
+![Domain](https://img.shields.io/Domain?url=https://d17cnpm2/nhom8)
+![Host](https://img.shields.io/Domain?url=)
 
 ***
 
