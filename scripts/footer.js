@@ -104,10 +104,10 @@ footer_template.innerHTML = `
       </div> 
       <div class="section links-section">
         <p>Links</p>
-        <a href="/">Home</a>
-        <a href="/shop.html">Shop</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
+        <a href="./">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
       </div> 
       <div class="section help-section">
         <p>Help</p>

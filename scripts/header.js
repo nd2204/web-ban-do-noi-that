@@ -71,10 +71,10 @@ header_template.innerHTML = `
   </style>
   <header>
     <div class="middle-section">
-      <a href="/">Home</a>
-      <a href="/shop.html">Shop</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="./">Home</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
     </div>
     <div class="right-section">
       <button onclick="alert('button clicked')"><img class="account-alert-icon" src="assets/icons/account_alert.svg"></button>
