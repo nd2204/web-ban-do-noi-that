@@ -102,3 +102,57 @@
   /* View More */
   line-height: 30px;
 }
+
+/*---------------------*/
+/* NEW ARRIVAL SECTION */
+/*---------------------*/
+.new-arrivals-section-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 640px;
+  background-color: #FFF9E5;
+}
+
+.new-arrivals-ctn {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.new-arrivals-title-ctn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 100px;
+  align-items: center;
+  flex: 1;
+}
+
+.order-btn {
+  margin-top: 33px;
+  padding: 17px 75px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  border-width: 1px;
+  cursor: pointer;
+  transition: ease-in-out 0.15s;
+}
+
+.order-btn:hover {
+  transition: ease-in-out 0.15s ;
+  background-color: black;
+  color: white;
+}
+
+.new-arrivals-img-ctn {
+  max-height: 100%;
+  margin: 15px 0;
+  flex: 2;
+}
+
+.new-arrivals-img-ctn img {
+  height: 100%;
+}

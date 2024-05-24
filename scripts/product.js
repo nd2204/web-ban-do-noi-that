@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     link.rel = 'stylesheet';
     document.head.appendChild(link)
   }
-  load_products();
 })
 
 function product_to_html(product) {
@@ -21,38 +20,47 @@ function product_to_html(product) {
   `;
 }
 
-function product_is_in_container(product, className) {
-  return document.querySelector(`${className} .product-ctn[data-id='${product.id}']`);
+function product_is_in_container(product, sel) {
+  const product_sel = `${sel} .product-ctn[data-id='${product.id}']`
+  return document.querySelector(product_sel) != null;
 }
 
-function load_products(className, numListing) {
+let products = []
+
+export function load_products(sel, numListing) {
   let xhttp = new XMLHttpRequest();
   let count = 0;
 
   xhttp.onload = function() {
     if (this.readyState == 4 && this.status == 200) {
-      const data = JSON.parse(this.response)
-      const products = data['products']
+      products = JSON.parse(this.response)['products']
+
+      // Initialize if any argument is null/empty
+      sel = (sel) ? sel : '.products-view';
+      numListing = numListing | products.length
+
       let html = ""
-      console.log(products)
-      let containerClass = (className) ? className : 'products-view';
-      let container = document.querySelector('.' + containerClass)
-      numListing = numListing
-        | products.length
-      for (let i = 0; i < numListing; ++i) {
-        if (products[i] && !product_is_in_container(products[i], container.className)) {
-          html += product_to_html(products[i]);
-          count++;
+      let container = document.querySelector(sel)
+      if (container) {
+        for (let i = 0; i < numListing; ++i) {
+          if (products[i] && !product_is_in_container(products[i], sel)) {
+            html += product_to_html(products[i]);
+            count++;
+          }
         }
+        container.innerHTML = html;
+      } else {
+        throw Error("Cannot find matching selector");
       }
-      console.log(container)
-      container.innerHTML = new String(html);
     }
   }
 
-  xhttp.open("GET", "/scripts/products.json", true);
+  xhttp.open("GET", "../scripts/products.json", true);
   xhttp.send();
 
   return count
 }
 
+export function get_products() {
+  return products
+}

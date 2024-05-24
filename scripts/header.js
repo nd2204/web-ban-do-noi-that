@@ -32,6 +32,10 @@ header_template.innerHTML = `
     font-size: 16;
   }
 
+  .middle-section a:hover {
+    transition: 
+  }
+
   .right-section {
     display: flex;
     justify-content: space-between;
