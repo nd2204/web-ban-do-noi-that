@@ -3,6 +3,7 @@
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/singleproduct.css">
     <title>Shop</title>
     <script src="./scripts/header.js"></script>
     <script src="./scripts/footer.js"></script>
@@ -11,16 +12,72 @@
   <body>
     <!--Must import header.js for this to work-->
     <header-component></header-component>
-    <div class="nav">
-      <a href="./">Home</a>
-      <img src="assets/icons/arrow.svg">
-      <a href="./">Shop</a>
-      <img src="assets/icons/arrow.svg">
-      <span class="nav-product-name"></span>
+    <div class="breadcrumb">
+      <div class="breadcrumb-ctn">
+        <span><a class="txt-caption txt-s-16" href="./">Home</a></span>
+        <span><a class="txt-caption txt-s-16" href="./shop.html">Shop</a></span>
+        <span class="product-name txt-s-16 txt-w-400">hello</span>
+      </div>
     </div>
-    <div class="product-gallery-bar"> </div>
-    <div class="spotlight-ctn">
-      <img class="spotlight-img" src="">
+
+    <div class="main-ctn">
+      <div class="product-images-ctn">
+        <div class="product-gallery">
+          <div class="gallery-slider">
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+            <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
+          </div>
+          <button class="gallery-prev-btn"><img src></button>
+          <button class="gallery-next-btn"><img src></button>
+        </div>
+        <div class="main-img-ctn"><img src=""></div>
+      </div>
+      <div class="product-detail">
+        <span class="product-name txt-s-42 txt-w-400"></span>
+        <span class="product-price txt-s-24 txt-w-500"></span>
+        <form>
+          <div class="product-rating">
+            <div class="star-rating"></div>
+            <span class="rating-count"></span>
+          </div>
+          <span class="product-description-brief"></span>
+          <div class="product-variation">
+            <p class="txt-s-14 txt-caption" style="margin-bottom:12px">Size</p>
+            <div class="variation-size">
+              <input type="radio" name="size" value="S" id="size-S">
+              <label class="size" for="size-S">S</label>
+              <input type="radio" name="size" value="M" id="size-M">
+              <label class="size" for="size-M">M</label>
+              <input type="radio" name="size" value="L" id="size-L">
+              <label class="size" for="size-L">L</label>
+              <input type="radio" name="size" value="XL" id="size-XL">
+              <label class="size" for="size-XL">XL</label>
+              <input type="radio" name="size" value="XS" id="size-XS">
+              <label class="size" for="size-XS">XS</label>
+            </div>
+            <p class="txt-s-14 txt-caption" style="margin-bottom:12px">Color</p>
+            <div class="variation-color">
+              <input type="radio" name="color" value="red" id="red">
+              <label class="color" for="red"></label>
+              <input type="radio" name="color" value="blue" id="blue">
+              <label class="color" for="blue"></label>
+            </div>
+          </div>
+          <div class="quantity-ctn">
+            <span class="quantity-btn decrement prevent-select">-</span>
+            <input type="number" value="1" class="quantity">
+            <span class="quantity-btn increment prevent-select">+</span>
+          </div>
+          <button class="add-to-cart-btn" type="submit">Add To Cart</button>
+        </form>
+        <hr>
+      </div>
     </div>
 
     <!--Must import footer.js for this to work-->

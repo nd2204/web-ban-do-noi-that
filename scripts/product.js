@@ -1,13 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const product_css = "../css/product.css"
-  if (!document.querySelector("link[href='${product_css}']")) {
-    let link = document.createElement("link");
-    link.href = product_css;
-    link.rel = 'stylesheet';
-    document.head.appendChild(link)
-  }
-})
-
 function product_to_html(product) {
   return `
     <a href="./singleproduct.html?id=${product.id}">
@@ -48,6 +38,17 @@ function init_product() {
 }
 
 export function load_products(sel, numListing) {
+  // Only add style when loading product to a container
+  document.addEventListener("DOMContentLoaded", () => {
+    const product_css = "../css/product.css"
+    if (!document.querySelector("link[href='${product_css}']")) {
+      let link = document.createElement("link");
+      link.href = product_css;
+      link.rel = 'stylesheet';
+      document.head.appendChild(link)
+    }
+  })
+
   let count = 0;
 
   // Initialize if any argument is null/empty
