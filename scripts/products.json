@@ -1,150 +1,209 @@
 [
-{ 
-      "id": "1",
-      "name": "Trenton modular sofa_3",
-      "currency": "Rs.",
-      "price": 25000.00,
-<<<<<<< HEAD
-      "image": "../assets/products/trenton_sofa.png",
-      "collection": ["../assets/products/trenton_sofa.png"] 
-},
-{
-      "id": "2",
-      "name": "Granite dining table with dining chair",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "../assets/products/granite_chair",
-      "collection": ["../assets/products/granite_chair"]
-},
-{
-      "id": "3",
-      "name": "outdoor_bar_table",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "../assets/products/outdoor_bar_table.png",
-      "collection": ["../assets/products/outdoor_bar_table.png"]
-},
-{
-      "id": "4",
-      "name": "Plain console with teak mirror",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "../assets/products/planin_mirror.png",
-      "collection": ["../assets/products/planin_mirror.png"]
-},
-{
-      "id": "1",
-      "name": "Trenton modular sofa_3",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "/assets/products/trenton_sofa.png",
-      "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-      "id": "1",
-      "name": "Trenton modular sofa_3",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "/assets/products/trenton_sofa.png",
-      "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-      "id": "1",
-      "name": "Trenton modular sofa_3",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "/assets/products/trenton_sofa.png",
-      "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-      "id": "1",
-      "name": "Trenton modular sofa_3",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "/assets/products/trenton_sofa.png",
-      "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-      "id": "1",
-      "name": "Trenton modular sofa_3",
-      "currency": "Rs.",
-      "price": 25000.00,
-      "image": "/assets/products/trenton_sofa.png",
-      "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-},
-{
-  "id": "1",
-  "name": "Trenton modular sofa_3",
-  "currency": "Rs.",
-  "price": 25000.00,
-  "image": "/assets/products/trenton_sofa.png",
-  "collection": ["/assets/products/trenton_sofa.png"]
-=======
-      "image": "./assets/products/trenton_sofa.png",
-      "collection": ["./assets/products/trenton_sofa.png"],
-      "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-      "rating" : {
-        "value": 4.2,
-        "count": 7
-      }
+  {
+    "id": "1",
+    "name": "Trenton modular sofa_3",
+    "currency": "Rs.",
+    "price": 25000.00,
+    "image": "./assets/products/trenton_sofa.png",
+    "collection": ["./assets/products/trenton_sofa.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.2,
+      "count": 7
     }
-  ]
->>>>>>> 18bf990e8e93349b9021975747ec658e212b3f23
-}
+  },
+  {
+    "id": "2",
+    "name": "Granite dining table with dining chair",
+    "currency": "Rs.",
+    "price": 25000.00,
+    "image": "../assets/products/granite_chair.png",
+    "collection": ["./assets/products/granite_chair.png"], 
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.9,
+      "count": 12    }
+  },
+  {
+    "id": "3",
+    "name": "Outdoor bar table",
+    "currency": "Rs.",
+    "price": 25000.00,
+    "image": "../assets/products/outdoor_bar_table.png",
+    "collection": ["../assets/products/outdoor_bar_table.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.1,
+      "count": 6
+    }
+  },
+  {
+    "id": "4",
+    "name": "Plain console with teak mirror",
+    "currency": "Rs.",
+    "price": 25000.00,
+    "image": "../assets/products/planin_mirror.png",
+    "collection": ["../assets/products/planin_mirror.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.0,
+      "count": 6
+    }
+  },
+  {
+    "id": "5",
+    "name": "Grain coffee table",
+    "currency": "Rs.",
+    "price": 15000.00,
+    "image": "/assets/products/grain_coffee_table.png",
+    "collection": ["/assets/products/grain_coffee_table.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.7,
+      "count": 15
+    }
+  },
+  {
+    "id": "6",
+    "name": "Kent coffee table",
+    "currency": "Rs.",
+    "price": 225000.00,
+    "image": "/assets/products/kent_coffee_table_1.png",
+    "collection": ["/assets/products/kent_coffee_table_1.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.5,
+      "count": 9
+    }
+  },
+  {
+    "id": "7",
+    "name": "Round coffee table",
+    "currency": "Rs.",
+    "price": 251000.00,
+    "image": "/assets/products/round_coffee_table (Custom).png",
+    "collection": ["/assets/products/round_coffee_table (Custom).png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.4,
+      "count": 18
+    }
+  },
+  {
+    "id": "8",
+    "name": "Reclaimed teak coffee table",
+    "currency": "Rs.",
+    "price": 25200.00,
+    "image": "/assets/products/reclaimed_teak_sideboard_1.png",
+    "collection": ["/assets/products/reclaimed_teak_sideboard_1.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.1,
+      "count": 17
+    }
+  },
+  {
+    "id": "9",
+    "name": "Plain console",
+    "currency": "Rs.",
+    "price": 258200.00,
+    "image": "/assets/products/plain_console.png",
+    "collection": ["/assets/products/plain_console.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.8,
+      "count": 12
+    }
+  },
+  {
+    "id": "10",
+    "name": "Reclaimed teak sideboard",
+    "currency": "Rs.",
+    "price": 20000.00,
+    "image": "/assets/products/reclaimed_teak_sideboard_1.png",
+    "collection": ["/assets/products/reclaimed_teak_sideboard_1.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.5,
+      "count": 9
+    }
+  },
+  {
+    "id": "11",
+    "name": "SPJ_0825",
+    "currency": "Rs.",
+    "price": 200000.00,
+    "image": "/assets/products/SJP_0825.png",
+    "collection": ["/assets/products/SJP_0825.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.8,
+      "count": 8
+    }
+  },
+  {
+    "id": "12",
+    "name": "Bella chair and table",
+    "currency": "Rs.",
+    "price": 100000.00,
+    "image": "/assets/products/bella_chair_and_table.png",
+    "collection": ["/assets/products/bella_chair_and_table.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.2,
+      "count": 5
+    }
+  },
+  {
+    "id": "13",
+    "name": "Granite square site table",
+    "currency": "Rs.",
+    "price": 258800.00,
+    "image": "/assets/products/granite_square_site_table.png",
+    "collection": ["/assets/products/granite_square_site_table.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.8,
+      "count": 19
+    }
+  },
+  {
+    "id": "14",
+    "name": "Aagaard sofa",
+    "currency": "Rs.",
+    "price": 250000.00,
+    "image": "/assets/products/asgaard_sofa.png",
+    "collection": ["/assets/products/   asgaard_sofa.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.3,
+      "count": 22
+    }
+  },
+  {
+    "id": "15",
+    "name": "Maya sofa three seater",
+    "currency": "Rs.",
+    "price": 115000.00,
+    "image": "/assets/products/maya_sofa_three_seater.png",
+    "collection": ["/assets/products/maya_sofa_three_seater.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 4.2,
+      "count": 9
+    }
+  },
+  {
+    "id": "16",
+    "name": "Outdoor sofa set",
+    "currency": "Rs.",
+    "price": 244000.00,
+    "image": "/assets/products/outdoor_sofa_set.png",
+    "collection": ["/assets/products/outdoor_sofa_set.png"],
+    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "rating" : {
+      "value": 3.7,
+      "count": 15
+    }
+  }
 ]
