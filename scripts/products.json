@@ -1,12 +1,138 @@
-{
-  "products": [
-    {
+[
+{ 
       "id": "1",
       "name": "Trenton modular sofa_3",
       "currency": "Rs.",
       "price": 25000.00,
-      "image": "./assets/products/trenton_sofa.png",
-      "collection": ["./assets/products/trenton_sofa.png"]
-    }
-  ]
+      "image": "../assets/products/trenton_sofa.png",
+      "collection": ["../assets/products/trenton_sofa.png"] 
+},
+{
+      "id": "2",
+      "name": "Granite dining table with dining chair",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "../assets/products/granite_chair",
+      "collection": ["../assets/products/granite_chair"]
+},
+{
+      "id": "3",
+      "name": "outdoor_bar_table",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "../assets/products/outdoor_bar_table.png",
+      "collection": ["../assets/products/outdoor_bar_table.png"]
+},
+{
+      "id": "4",
+      "name": "Plain console with teak mirror",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "../assets/products/planin_mirror.png",
+      "collection": ["../assets/products/planin_mirror.png"]
+},
+{
+      "id": "1",
+      "name": "Trenton modular sofa_3",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "/assets/products/trenton_sofa.png",
+      "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+      "id": "1",
+      "name": "Trenton modular sofa_3",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "/assets/products/trenton_sofa.png",
+      "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+      "id": "1",
+      "name": "Trenton modular sofa_3",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "/assets/products/trenton_sofa.png",
+      "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+      "id": "1",
+      "name": "Trenton modular sofa_3",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "/assets/products/trenton_sofa.png",
+      "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+      "id": "1",
+      "name": "Trenton modular sofa_3",
+      "currency": "Rs.",
+      "price": 25000.00,
+      "image": "/assets/products/trenton_sofa.png",
+      "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
+},
+{
+  "id": "1",
+  "name": "Trenton modular sofa_3",
+  "currency": "Rs.",
+  "price": 25000.00,
+  "image": "/assets/products/trenton_sofa.png",
+  "collection": ["/assets/products/trenton_sofa.png"]
 }
+]
