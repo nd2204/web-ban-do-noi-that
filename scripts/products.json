@@ -4,6 +4,7 @@
       "name": "Trenton modular sofa_3",
       "currency": "Rs.",
       "price": 25000.00,
+<<<<<<< HEAD
       "image": "../assets/products/trenton_sofa.png",
       "collection": ["../assets/products/trenton_sofa.png"] 
 },
@@ -134,5 +135,16 @@
   "price": 25000.00,
   "image": "/assets/products/trenton_sofa.png",
   "collection": ["/assets/products/trenton_sofa.png"]
+=======
+      "image": "./assets/products/trenton_sofa.png",
+      "collection": ["./assets/products/trenton_sofa.png"],
+      "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+      "rating" : {
+        "value": 4.2,
+        "count": 7
+      }
+    }
+  ]
+>>>>>>> 18bf990e8e93349b9021975747ec658e212b3f23
 }
 ]
