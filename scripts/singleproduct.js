@@ -1,4 +1,5 @@
 import { get_singleproduct } from './product.js'
+import * as Cart from './cart.js'
 
 function convert_rating_to_star(rating) {
   let html = ""
@@ -74,6 +75,7 @@ document.querySelector('.rating-count').innerHTML
 let form = document.querySelector('form')
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  let data = new FormData(this);
-  console.log(data)
+  let data = new FormData(form);
+  console.log(data.get('quantity'))
+
 })

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/singleproduct.css">
     <title>Shop</title>
-    <script src="./scripts/header.js"></script>
+    <script type="module" src="./scripts/header.js"></script>
     <script src="./scripts/footer.js"></script>
     <script type="module" src="./scripts/singleproduct.js"></script>
   </head>
@@ -71,7 +71,7 @@
           </div>
           <div class="quantity-ctn">
             <span class="quantity-btn decrement prevent-select">-</span>
-            <input type="number" value="1" class="quantity">
+            <input type="number" name="quantity" value="1" class="quantity">
             <span class="quantity-btn increment prevent-select">+</span>
           </div>
           <button class="add-to-cart-btn" type="submit">Add To Cart</button>

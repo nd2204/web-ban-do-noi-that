@@ -54,6 +54,7 @@ input, label {
   column-gap: 105px;
   justify-content: center;
   padding: 35px 100px 55px;
+  border-bottom: 1px solid #D9D9D9;
   height: 100vh;
 }
 

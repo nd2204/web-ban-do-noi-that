@@ -34,7 +34,7 @@ function init_product() {
     }
   }
 
-  xhttp.open("GET", "../scripts/products.json", false);
+  xhttp.open("GET", "../data/products.json", false);
   xhttp.send();
 }
 
@@ -54,8 +54,8 @@ export function load_products(sel, numListing) {
 
   // Initialize if any argument is null/empty
   sel = (sel) ? sel : CONTAINER_CLASSNAME;
-  numListing = numListing | g_products.length
-  
+  numListing = (numListing) ? numListing : g_products.length
+
   let html = ""
   let container = document.querySelector(sel)
   if (!(sel !== CONTAINER_CLASSNAME || container.classList.contain(CONTAINER_CLASSNAME))) {
