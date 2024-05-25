@@ -23,13 +23,14 @@ let g_products = []
 
 if (g_products.length <= 0) {
   init_product();
+  console.log(g_products)
 }
 
 function init_product() {
   let xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     if (this.readyState == 4 && this.status == 200) {
-      g_products = JSON.parse(this.response)['products']
+      g_products = JSON.parse(this.response)
     }
   }
 
@@ -54,7 +55,7 @@ export function load_products(sel, numListing) {
   // Initialize if any argument is null/empty
   sel = (sel) ? sel : CONTAINER_CLASSNAME;
   numListing = numListing | g_products.length
-
+  
   let html = ""
   let container = document.querySelector(sel)
   if (!(sel !== CONTAINER_CLASSNAME || container.classList.contain(CONTAINER_CLASSNAME))) {
