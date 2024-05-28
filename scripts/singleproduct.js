@@ -1,4 +1,5 @@
 import { get_singleproduct } from './product.js'
+import { money_to_string } from './utils/money.js'
 import * as Cart from './cart.js'
 
 function convert_rating_to_star(rating) {
@@ -30,52 +31,42 @@ function getQueryVariable(variable) {
   }
 }
 
-const selectors = {
-  productName: '.product-name',
-  mainImage: '.main-img-ctn img',
-}
-
 const product = get_singleproduct(getQueryVariable('id'))
 
-document.querySelectorAll(selectors.productName).forEach(
-  (productName) => { productName.innerText = product.name}
-)
-document.querySelector('.product-price').innerText
-  = product.currency + ' ' + (product.price).toFixed(2)
-
-const spotlight_img = document.querySelector(selectors.mainImage)
-spotlight_img.src = product.image;
-console.log(spotlight_img)
-// console.log(product)
-
-document.querySelectorAll('.gallery-img')
-  .forEach((img) => {
-    img.src = product.image
-  })
-
-document.querySelector('.product-description-brief').innerHTML
-  = product.description;
-
-document.querySelector('.star-rating').innerHTML
-  = convert_rating_to_star(product.rating.value);
-
 let quantity = document.querySelector('.quantity');
-document.querySelector('.increment').addEventListener("click",(event) => {
-  quantity.value = parseInt(quantity.value) + 1;
-})
-document.querySelector('.decrement').addEventListener("click",(event) => {
-  if (quantity.value <= 1) return;
-  quantity.value = parseInt(quantity.value) - 1;
-})
+const querySelectorCallback = {
+  '.main-img-ctn img': (element) => { element.src = product.image },
+  '.product-price': (element) => { element.innerText = money_to_string(product.price, product.currency)},
+  '.product-description-brief': (element) => { element.innerText = product.description },
+  '.star-rating': (element) => { element.innerHTML = convert_rating_to_star(product.rating.value) },
+  '.rating-count': (element) => { element.innerHTML = product.rating.count + ' Customer Review'; },
+  '.increment': (element) => { element.addEventListener("click", () => quantity.value = parseInt(quantity.value) + 1) },
+  '.decrement': (element) => { 
+    element.addEventListener("click", () => {
+        if (quantity.value <= 1) return;
+        quantity.value = parseInt(quantity.value) - 1;
+      }
+    )
+  },
+  'form': (element) => {
+    element.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let data = new FormData(form);
+      const quantity = data.get('quantity');
+      // Cart.add()
+    })
+  },
+}
 
-document.querySelector('.rating-count').innerHTML
-  = product.rating.count + ' Customer Review';
+const querySelectorAllCallback = {
+  '.gallery-img': (element) => { element.forEach((img) => {img.src = product.image}) },
+  '.product-name': (element) => { element.forEach((productName) => { productName.innerText = product.name}) },
+}
 
+for (const [k, v] of Object.entries(querySelectorCallback)) {
+  v(document.querySelector(k))
+}
 
-let form = document.querySelector('form')
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let data = new FormData(form);
-  console.log(data.get('quantity'))
-
-})
+for (const [k, v] of Object.entries(querySelectorAllCallback)) {
+  v(document.querySelectorAll(k))
+}

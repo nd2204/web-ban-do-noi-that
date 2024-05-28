@@ -1,3 +1,5 @@
+import { money_to_string } from './utils/money.js'
+
 function product_to_html(product) {
   return `
     <a href="./singleproduct.html?id=${product.id}">
@@ -6,7 +8,7 @@ function product_to_html(product) {
           <img src="${product.image}" alt="${product.name}">
         </div>
         <p class="product-title">${product.name}</p>
-        <p class="product-price">${product.currency} ${product.price.toFixed(2)}</p>
+        <p class="product-price">${money_to_string(product.price, product.currency)}</p>
       </div>
     </a>
   `;
@@ -23,7 +25,6 @@ let g_products = []
 
 if (g_products.length <= 0) {
   init_product();
-  console.log(g_products)
 }
 
 function init_product() {
