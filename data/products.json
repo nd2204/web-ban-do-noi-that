@@ -7,8 +7,12 @@
     "image": "./assets/products/trenton_sofa.png",
     "collection": ["./assets/products/trenton_sofa.png"],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "variations": {
+      "colors": ["#FF00FF", "#00FF00", "#000000"],
+      "sizes": ["S", "M", "XS"]
+    },
     "rating" : {
-      "value": 4.2,
+      "value": 4.3,
       "count": 7
     }
   },
@@ -22,11 +26,12 @@
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "rating" : {
       "value": 3.9,
-      "count": 12    }
+      "count": 12
+    }
   },
   {
     "id": "3",
-    "name": "Outdoor bar table",
+    "name": "Outdoor bar table and stool",
     "currency": "Rs.",
     "price": 25000.00,
     "image": "./assets/products/outdoor_bar_table.png",
@@ -46,7 +51,7 @@
     "collection": ["./assets/products/planin_mirror.png"],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "rating" : {
-      "value": 4.0,
+      "value": 2.0,
       "count": 6
     }
   },

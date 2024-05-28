@@ -96,7 +96,11 @@
   min-height: 777px;
 }
 
-.toppick-ctn a {
+.toppick-ctn .products-view {
+  margin: 0 100px;
+}
+
+.toppick-ctn .view-more-btn {
   margin: 70px 0px;
   line-height: 30px;
 }

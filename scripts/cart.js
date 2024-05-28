@@ -4,4 +4,6 @@ if (!window.localStorage) {
 
 let storage = window.localStorage
 
-if (storage.getItem('cart'))
+if (storage.getItem('cart')) {
+  
+}

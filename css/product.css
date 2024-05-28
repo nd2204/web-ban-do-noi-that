@@ -21,8 +21,11 @@
 }
 
 .product-img-ctn {
-  max-width: 287px;
-  max-height: 287px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 287px;
+  height: 287px;
 }
 
 .product-img-ctn img {
