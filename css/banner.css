@@ -1,0 +1,49 @@
+/* banner */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 316px;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+  column-gap: 12px;
+}
+
+.banner span {
+  display: flex;
+  align-items: center;
+}
+
+.banner-ctn span:not(:last-child)::after {
+  content: url('../assets/icons/arrow.svg')
+}
+
+.banner-background {
+  position: absolute;
+  filter: blur(3px);
+  width: 100%;
+  z-index: 0;
+  opacity: 0.5
+}
+
+.banner div {
+  text-align: center;
+  z-index: 1;
+}
+
+.banner-title {
+  margin-top: -20px;
+}
+
+.banner-ctn span:not(:last-child) a {
+  margin-right: 12px;
+}
