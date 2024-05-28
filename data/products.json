@@ -7,12 +7,8 @@
     "image": "./assets/products/trenton_sofa.png",
     "collection": ["./assets/products/trenton_sofa.png"],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "variations": {
-      "colors": ["#FF00FF", "#00FF00", "#000000"],
-      "sizes": ["S", "M", "XS"]
-    },
     "rating" : {
-      "value": 4.3,
+      "value": 4.2,
       "count": 7
     }
   },
@@ -21,22 +17,21 @@
     "name": "Granite dining table with dining chair",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/granite_chair.png",
+    "image": "../assets/products/granite_chair.png",
     "collection": ["./assets/products/granite_chair.png"], 
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "description": "Maecenas pulvinar lobortis laoreet. Nunc molestie tristique nisl non feugiat. Fusce leo purus, facilisis eget purus eget, sagittis faucibus nibh. Donec vitae purus vestibulum, sollicitudin est et, convallis ante.",
     "rating" : {
       "value": 3.9,
-      "count": 12
-    }
+      "count": 12    }
   },
   {
     "id": "3",
-    "name": "Outdoor bar table and stool",
+    "name": "Outdoor bar table",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/outdoor_bar_table.png",
-    "collection": ["./assets/products/outdoor_bar_table.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "../assets/products/outdoor_bar_table.png",
+    "collection": ["../assets/products/outdoor_bar_table.png"],
+    "description": " Phasellus eu vulputate odio. Proin tincidunt, est et luctus finibus, ex lectus lacinia sapien, sed accumsan leo lacus et sapien. Praesent nec tellus eget lectus faucibus posuere eu eget nisl.",
     "rating" : {
       "value": 4.1,
       "count": 6
@@ -47,11 +42,11 @@
     "name": "Plain console with teak mirror",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/planin_mirror.png",
-    "collection": ["./assets/products/planin_mirror.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "../assets/products/planin_mirror.png",
+    "collection": ["../assets/products/planin_mirror.png"],
+    "description": " Proin dictum nulla a sem blandit finibus non a ligula. Nulla tristique tincidunt lacus, in maximus neque ultricies rutrum.",
     "rating" : {
-      "value": 2.0,
+      "value": 4.0,
       "count": 6
     }
   },
@@ -60,9 +55,9 @@
     "name": "Grain coffee table",
     "currency": "Rs.",
     "price": 15000.00,
-    "image": "./assets/products/grain_coffee_table.png",
-    "collection": ["./assets/products/grain_coffee_table.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/grain_coffee_table.png",
+    "collection": ["/assets/products/grain_coffee_table.png"],
+    "description": " Nullam pharetra dolor in metus efficitur, eget placerat diam venenatis. Maecenas suscipit ut massa commodo molestie. Phasellus egestas ut urna pellentesque ultrices.",
     "rating" : {
       "value": 3.7,
       "count": 15
@@ -73,9 +68,9 @@
     "name": "Kent coffee table",
     "currency": "Rs.",
     "price": 225000.00,
-    "image": "./assets/products/kent_coffee_table_1.png",
-    "collection": ["./assets/products/kent_coffee_table_1.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/kent_coffee_table_1.png",
+    "collection": ["/assets/products/kent_coffee_table_1.png"],
+    "description": " Vestibulum dictum mi sed ultricies malesuada. Vivamus pretium turpis ligula, non suscipit ex vestibulum tincidunt. Donec in mi porta nisi pulvinar varius sed sed arcu.",
     "rating" : {
       "value": 3.5,
       "count": 9
@@ -86,9 +81,9 @@
     "name": "Round coffee table",
     "currency": "Rs.",
     "price": 251000.00,
-    "image": "./assets/products/round_coffee_table (Custom).png",
-    "collection": ["./assets/products/round_coffee_table (Custom).png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/round_coffee_table (Custom).png",
+    "collection": ["/assets/products/round_coffee_table (Custom).png"],
+    "description": " Nam sed elit at augue iaculis volutpat. Nunc in odio luctus, ullamcorper elit sed, pellentesque elit. Maecenas orci leo, pellentesque a semper at, ultricies sit amet eros.",
     "rating" : {
       "value": 4.4,
       "count": 18
@@ -99,9 +94,9 @@
     "name": "Reclaimed teak coffee table",
     "currency": "Rs.",
     "price": 25200.00,
-    "image": "./assets/products/reclaimed_teak_sideboard_1.png",
-    "collection": ["./assets/products/reclaimed_teak_sideboard_1.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/reclaimed_teak_sideboard_1.png",
+    "collection": ["/assets/products/reclaimed_teak_sideboard_1.png"],
+    "description": " Morbi cursus urna ut tempus feugiat. Curabitur odio velit, consequat id porttitor sit amet, commodo vitae tellus.",
     "rating" : {
       "value": 3.1,
       "count": 17
@@ -112,9 +107,9 @@
     "name": "Plain console",
     "currency": "Rs.",
     "price": 258200.00,
-    "image": "./assets/products/plain_console.png",
-    "collection": ["./assets/products/plain_console.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/plain_console.png",
+    "collection": ["/assets/products/plain_console.png"],
+    "description": " Donec odio odio, suscipit id nibh vitae, finibus sollicitudin nunc. Duis pellentesque velit at suscipit bibendum. Suspendisse et consequat dui. Mauris luctus sem sed mi porta, non ultricies nisl vulputate.",
     "rating" : {
       "value": 3.8,
       "count": 12
@@ -125,9 +120,9 @@
     "name": "Reclaimed teak sideboard",
     "currency": "Rs.",
     "price": 20000.00,
-    "image": "./assets/products/reclaimed_teak_sideboard_1.png",
-    "collection": ["./assets/products/reclaimed_teak_sideboard_1.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/reclaimed_teak_sideboard_1.png",
+    "collection": ["/assets/products/reclaimed_teak_sideboard_1.png"],
+    "description": " Nullam tristique pulvinar tincidunt. Vestibulum eros orci, mollis et placerat tristique, pharetra a nulla. Sed vitae ullamcorper sem. Aliquam viverra libero quis dapibus iaculis.",
     "rating" : {
       "value": 4.5,
       "count": 9
@@ -138,9 +133,9 @@
     "name": "SPJ_0825",
     "currency": "Rs.",
     "price": 200000.00,
-    "image": "./assets/products/SJP_0825.png",
-    "collection": ["./assets/products/SJP_0825.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/SJP_0825.png",
+    "collection": ["/assets/products/SJP_0825.png"],
+    "description": " Suspendisse laoreet semper justo, vel venenatis ex luctus in. Integer laoreet aliquet enim eget consectetur. Mauris suscipit lacus vel nisl tincidunt, ut suscipit ex feugiat.",
     "rating" : {
       "value": 4.8,
       "count": 8
@@ -151,9 +146,9 @@
     "name": "Bella chair and table",
     "currency": "Rs.",
     "price": 100000.00,
-    "image": "./assets/products/bella_chair_and_table.png",
-    "collection": ["./assets/products/bella_chair_and_table.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/bella_chair_and_table.png",
+    "collection": ["/assets/products/bella_chair_and_table.png"],
+    "description": " Vivamus ac semper lectus, laoreet consequat ligula. Nulla nec iaculis ipsum. Proin sodales malesuada velit eu mollis. Etiam dui ex, sodales sed suscipit nec, feugiat at odio.",
     "rating" : {
       "value": 3.2,
       "count": 5
@@ -164,9 +159,9 @@
     "name": "Granite square site table",
     "currency": "Rs.",
     "price": 258800.00,
-    "image": "./assets/products/granite_square_site_table.png",
-    "collection": ["./assets/products/granite_square_site_table.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/granite_square_site_table.png",
+    "collection": ["/assets/products/granite_square_site_table.png"],
+    "description": " Praesent quam odio, laoreet ut purus a, interdum luctus nisl. Vestibulum nec vestibulum mi, vel scelerisque odio. Curabitur porta, arcu vel dignissim dignissim, velit eros interdum nulla, sed faucibus nibh lectus vel neque.",
     "rating" : {
       "value": 3.8,
       "count": 19
@@ -177,9 +172,9 @@
     "name": "Aagaard sofa",
     "currency": "Rs.",
     "price": 250000.00,
-    "image": "./assets/products/asgaard_sofa.png",
-    "collection": ["./assets/products/   asgaard_sofa.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/asgaard_sofa.png",
+    "collection": ["/assets/products/   asgaard_sofa.png"],
+    "description": " Sed venenatis felis vel nibh convallis sollicitudin. Nulla fringilla diam eget justo volutpat ornare. Phasellus interdum facilisis justo, vel sodales enim imperdiet id.",
     "rating" : {
       "value": 4.3,
       "count": 22
@@ -190,9 +185,9 @@
     "name": "Maya sofa three seater",
     "currency": "Rs.",
     "price": 115000.00,
-    "image": "./assets/products/maya_sofa_three_seater.png",
-    "collection": ["./assets/products/maya_sofa_three_seater.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/maya_sofa_three_seater.png",
+    "collection": ["/assets/products/maya_sofa_three_seater.png"],
+    "description": " Maecenas enim ipsum, congue quis mollis non, tincidunt tempus felis. Cras tristique augue nec tortor pulvinar semper. Duis euismod nibh eu leo placerat condimentum.",
     "rating" : {
       "value": 4.2,
       "count": 9
@@ -203,9 +198,9 @@
     "name": "Outdoor sofa set",
     "currency": "Rs.",
     "price": 244000.00,
-    "image": "./assets/products/outdoor_sofa_set.png",
-    "collection": ["./assets/products/outdoor_sofa_set.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "/assets/products/outdoor_sofa_set.png",
+    "collection": ["/assets/products/outdoor_sofa_set.png"],
+    "description": " Morbi et risus nec neque consectetur iaculis accumsan sit amet urna. Aenean quis tempor enim. Duis non nibh est. Quisque in libero quam. Duis nec dictum nibh. Nullam finibus dignissim sem, at rutrum magna mollis vel. Nam bibendum imperdiet nisi, vel tincidunt nunc. In fringilla metus eget orci efficitur molestie.",
     "rating" : {
       "value": 3.7,
       "count": 15
