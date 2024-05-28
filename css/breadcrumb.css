@@ -1,0 +1,27 @@
+/* BREADCRUMB */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.breadcrumb-ctn {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+  margin: 32px 0;
+  margin-left: 100px;
+}
+
+.breadcrumb span {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-ctn a {
+  margin-right: 20px; 
+}
+
+.breadcrumb-ctn span:not(:last-child)::after {
+  content: url('../assets/icons/arrow.svg')
+}

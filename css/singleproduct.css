@@ -4,45 +4,10 @@ input, label {
 .prevent-select {
   user-select: none;
 }
-/* BREADCRUMB */
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
 
-.breadcrumb-ctn {
-  display: flex;
-  flex-direction: row;
-  column-gap: 25px;
-  margin: 32px 0;
-  margin-left: 100px;
-}
-
-.breadcrumb span {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb-path a {
-  margin-right: 20px; 
-}
-
-.breadcrumb-path:not(:last-child)::after {
-  content: url('../assets/icons/arrow.svg')
-}
-
-.arrow-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-}
-
-.breadcrumb-product-name {
+.breadcrumb-ctn .product-name {
   border-left: 2px solid #9F9F9F;
-  padding-left: 30px;
+  padding-left: 20px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
