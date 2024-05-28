@@ -24,11 +24,11 @@ input, label {
   align-items: center;
 }
 
-.breadcrumb span a {
+.breadcrumb-path a {
   margin-right: 20px; 
 }
 
-.breadcrumb span:not(:last-child)::after {
+.breadcrumb-path:not(:last-child)::after {
   content: url('../assets/icons/arrow.svg')
 }
 
@@ -55,13 +55,14 @@ input, label {
   justify-content: center;
   padding: 35px 100px 55px;
   border-bottom: 1px solid #D9D9D9;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /*Product Images*/
 
 .product-images-ctn {
   height: 500px;
+  display: flex;
 }
 
 .product-gallery {
@@ -74,7 +75,6 @@ input, label {
   height: 100%;
   vertical-align: top;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .product-gallery::-webkit-scrollbar {
@@ -108,8 +108,7 @@ input, label {
   align-items: center;
   position: relative;
   background-color: #FFF9E5;
-  width: 400px;
-  height: 500px;
+  height: 100%;
   border-radius: 10px;
 }
 

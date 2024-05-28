@@ -19,5 +19,5 @@
 
 ***
 
-### Preview
+### Screenshot
 TODO
