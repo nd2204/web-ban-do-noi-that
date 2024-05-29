@@ -28,18 +28,18 @@
     </div>
 
     <div class="option-bar">
-      <div>
+      <div class="lh-options">
         <img class="icon filter-icon" src="./assets/icons/filtering.svg">
-        <span>Filter</span>
-        <input type="radio" name="grid" value="grid">
-        <label for="grid"><img class="icon grid-big-round-icon" src="./assets/icons/grid-big-round.svg"></label>
-        <input type="radio" name="list" value="list">
-        <label for="list"><img class="icon view-list-icon" src="./assets/icons/view-list.svg"></label>
+        <span class="txt-s-20">Filter</span>
+        <input type="radio" name="view" value="grid" id="grid" checked>
+        <label for="grid"><img class="icon view grid-icon" src="./assets/icons/grid-big-round.svg"></label>
+        <input type="radio" name="view" value="list" id="list">
+        <label for="list"><img class="icon list-icon" src="./assets/icons/view-list.svg"></label>
         <div class="filter-result">
           <span id="filter-result"></span>
         </div>
       </div>
-      <div>
+      <div class="rh-options">
         <label for="show">Show</label>
         <input class="show-count-input" id="show-count-input" type="number" name="show" value="16">
         <label for="sort">Sort by</label>

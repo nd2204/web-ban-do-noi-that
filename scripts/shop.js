@@ -7,8 +7,8 @@ let filter_result_count = parseInt(document.getElementById('show-count-input').v
 document.querySelector('#filter-result').innerText = `Showing 1-${filter_result_count}`
 
 document.querySelectorAll('.icon')
-    .forEach((img) => {
-        img.addEventListener('click', (event) => {
-            
-        })
+  .forEach((img) => {
+    img.addEventListener('click', (event) => {
+      
     })
+  })

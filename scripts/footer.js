@@ -2,8 +2,10 @@ const footer_template = document.createElement('template');
 
 footer_template.innerHTML = `
   <style>
-    a {
-      text-decoration: none;
+    a { text-decoration: none; }
+    footer hr { margin: 35px 0px; }
+    a:hover {
+      opacity: 0.5;
     }
 
     footer {
@@ -11,9 +13,6 @@ footer_template.innerHTML = `
       padding: 98px 100px 38px;
     }
 
-    footer hr {
-      margin: 35px 0px;
-    }
 
     .copyright-text {
       font-size: 1rem;
@@ -86,7 +85,7 @@ footer_template.innerHTML = `
 
     button[type="submit"] {
       font-size: 0.875rem;
-      font-weight: 500;
+      font-weight: 600;
       border-style: none;
       border-bottom: 0.1rem solid black;
       background-color: #00000000;
