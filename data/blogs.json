@@ -1,7 +1,7 @@
 [
   {
     "title": "Going all-in with millennial design",
-    "image": "../assets/blogs/blog_1.jpg",
+    "image": "assets/blogs/blog_1.jpg",
     "author": "Admin",
     "duration": "5 min",
     "date": { "day": 14, "month": "Oct", "year": 2022},
@@ -10,7 +10,7 @@
   },
   {
     "title": "Going all-in with millennial design",
-    "image": "../assets/blogs/blog_2.jpg",
+    "image": "assets/blogs/blog_2.jpg",
     "author": "Admin",
     "date": { "day": 14, "month": "Oct", "year": 2022},
     "category": "Handmade",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Going all-in with millennial design",
-    "image": "../assets/blogs/blog_3.jpg",
+    "image": "assets/blogs/blog_3.jpg",
     "author": "Admin",
     "date": { "day": 14, "month": "Oct", "year": 2022},
     "category": "Handmade",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Exploring new ways of decorating",
-    "image": "../assets/blogs/",
+    "image": "assets/blogs/",
     "date": { "day": 14, "month": "Oct", "year": 2022},
     "author": "Admin",
     "category": "Handmade",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Handmade pieces that took time to make",
-    "image": "../assets/blogs/",
+    "image": "assets/blogs/",
     "author": "Admin",
     "date": { "day": 14, "month": "Oct", "year": 2022},
     "category": "Wood",
@@ -46,7 +46,7 @@
   },
   {
     "title": "Modern home in Milan",
-    "image": "../assets/blogs/",
+    "image": "assets/blogs/",
     "author": "Admin",
     "date": { "day": 14, "month": "Oct", "year": 2022},
     "category": "Handmade",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Colorful office redesign",
-    "image": "../assets/blogs/",
+    "image": "assets/blogs/",
     "author": "Admin",
     "date": { "day": 14, "month": "Oct", "year": 2022},
     "category": "Design",

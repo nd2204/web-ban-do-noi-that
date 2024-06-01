@@ -68,7 +68,7 @@ export class ProductsLoader {
   load(numListing, layout, product_list) {
     // Only add style when loading product to a container
     if (!this.container) throw Error("Can not find matching selector");
-    const product_css = "../css/product.css"
+    const product_css = "css/product.css"
     if (!document.querySelector(`link[href="${product_css}"]`)) {
       let link = document.createElement("link");
       link.href = product_css;
