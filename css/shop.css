@@ -96,6 +96,7 @@ input[type="radio"]:checked + label img {
 }
 
 .sort-sel {
+  display: inline-block;
   min-width: 188px;
   padding-left: 30px;
   padding-right: 30px;
@@ -105,3 +106,60 @@ input[type="radio"]:checked + label img {
 .rh-options label:not(:first-of-type)  {
   margin-left: 30px;
 }
+
+/* PRODUCTS */
+.products-view {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 117px;
+}
+
+/* Pagination */
+.paginate-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.paginate-btn {
+  height: 60px;
+  box-sizing: border-box;
+  background-color: #FFF9E5;
+  border-radius: 10px;
+  border-style: none;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 92px;
+}
+
+.paginate-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+}
+
+.paginate-current {
+  background-color: #FBEBB5;
+}
+
+#paginate-prev {
+  padding-left: 29px;
+  padding-right: 29px;
+  margin-right: 38px;
+}
+
+#paginate-next {
+  padding-left: 29px;
+  padding-right: 29px;
+  margin-left: 38px;
+}
+
+.paginate-block .paginate-index:not(:first-child) {
+  margin-left: 38px;
+}
+
+/* .hide { */
+/*   display: none; */
+/* } */

@@ -1,6 +1,8 @@
-import { get_singleproduct } from './product.js'
+import { ProductsLoader } from './product.js'
 import { money_to_string } from './utils/money.js'
-import * as Cart from './cart.js'
+import { Cart } from './cart.js'
+
+let cart = new Cart()
 
 function convert_rating_to_star(rating) {
   let html = ""
@@ -31,7 +33,9 @@ function getQueryVariable(variable) {
   }
 }
 
-const product = get_singleproduct(getQueryVariable('id'))
+let loader = new ProductsLoader('.products-view');
+const product = loader.getSingleproduct(getQueryVariable('id'))
+loader.load(4);
 
 let quantity = document.querySelector('.quantity');
 const querySelectorCallback = {
@@ -48,12 +52,24 @@ const querySelectorCallback = {
       }
     )
   },
-  'form': (element) => {
-    element.addEventListener("submit", (event) => {
+  'form': (form) => {
+    form.addEventListener("submit", (event) => {
       event.preventDefault();
+
       let data = new FormData(form);
-      const quantity = data.get('quantity');
-      // Cart.add()
+      if (!data.get('color')) {
+        alert("Please pick a color.");
+      } else if (!data.get('size')) {
+        alert("Please pick a size.");
+      }
+
+      cart.add(product.id, {
+        size: data.get('size'),
+        color: data.get('color'),
+        quantity: data.get('quantity')
+      })
+
+      console.log(cart.get_cart())
     })
   },
 }

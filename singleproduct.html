@@ -3,7 +3,6 @@
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/breadcrumb.css">
     <link rel="stylesheet" href="./css/singleproduct.css">
     <title>Shop</title>
     <script type="module" src="./scripts/header.js"></script>
@@ -24,7 +23,7 @@
     <div class="main-ctn">
       <div class="product-images-ctn">
         <div class="product-gallery">
-          <div class="gallery-slider">
+          <div class="gallery-slide">
             <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
             <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
             <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
@@ -34,15 +33,15 @@
             <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
             <div class="gallery-img-ctn"><img class="gallery-img" src=""></div>
           </div>
-          <button class="gallery-prev-btn"><img src></button>
-          <button class="gallery-next-btn"><img src></button>
+          <button class="slide-btn gallery-prev">Prev</button>
+          <button class="slide-btn gallery-next">Next</button>
         </div>
         <div class="main-img-ctn"><img src=""></div>
       </div>
       <div class="product-detail">
         <span class="product-name txt-s-42 txt-w-400"></span>
         <span class="product-price txt-s-24 txt-w-500"></span>
-        <form>
+        <form id="variation">
           <div class="product-rating">
             <div class="star-rating"></div>
             <span class="rating-count"></span>
@@ -51,7 +50,7 @@
           <div class="product-variation">
             <p class="txt-s-14 txt-caption" style="margin-bottom:12px">Size</p>
             <div class="variation-size">
-              <input type="radio" name="size" value="S" id="size-S">
+              <input type="radio" name="size" value="S" id="size-S" required>
               <label class="size" for="size-S">S</label>
               <input type="radio" name="size" value="M" id="size-M">
               <label class="size" for="size-M">M</label>
@@ -64,10 +63,10 @@
             </div>
             <p class="txt-s-14 txt-caption" style="margin-bottom:12px">Color</p>
             <div class="variation-color">
-              <input type="radio" name="color" value="red" id="red">
-              <label class="color" for="red"></label>
+              <input type="radio" name="color" value="red" id="red" required>
+              <label class="color" for="red" style="background-color: lightpink"></label>
               <input type="radio" name="color" value="blue" id="blue">
-              <label class="color" for="blue"></label>
+              <label class="color" for="blue" style="background-color: lightblue"></label>
             </div>
           </div>
           <div class="quantity-ctn">
@@ -77,7 +76,72 @@
           </div>
           <button class="add-to-cart-btn" type="submit">Add To Cart</button>
         </form>
-        <hr>
+        <hr class="hr">
+        <div class="extra-ctn">
+          <span class="extra">
+            <span class="extra-left">SKU</span>
+            <span class="colon">:</span>
+            <span class="product-sku"></span>
+          </span>
+          <span class="extra">
+            <span class="extra-left">Category</span>
+            <span class="colon">:</span>
+            <span class="product-category"></span>
+          </span>
+          <span class="extra">
+            <span class="extra-left">Tags</span>
+            <span class="colon">:</span>
+            <span class="product-tags"></span>
+          </span>
+          <span class="extra">
+            <span class="extra-left">Share</span>
+            <span class="colon">:</span>
+            <span>
+              <a class="smedia" target="_blank" href="https://www.facebook.com"><img src="assets/icons/facebook.svg" alt=""></a>
+              <a class="smedia" target="_blank" href="https://www.linkedin.com"><img src="assets/icons/linkedin.svg" alt=""></a>
+              <a class="smedia" target="_blank" href="https://www.twitter.com"><img src="assets/icons/twitter.svg" alt=""></a>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-detail">
+      <div class="more-detail-select">
+        <span class="selectable selected">Description</span>
+        <span class="selectable">Additional Information</span>
+        <span class="selectable">Reviews <span class="product-review"></span></span>
+      </div>
+      <div class="more-detail-ctn">
+        <div style="margin-bottom: 36px">
+          <p style="margin-bottom:30px">
+            Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker
+            takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</p>
+          <p>
+            Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. 
+            Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+            stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended
+            highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the
+            guitar-influenced leather strap enables easy and stylish travel.
+          </p>
+        </div>
+      </div>
+      <div class="more-detail-images">
+        <div class="detail-img-ctn">
+          <img src="assets/imgs/cloud_sofa_three_seater_1.png" alt="cloud sofa three seater">
+        </div>
+        <div class="detail-img-ctn">
+          <img src="assets/imgs/cloud_sofa_three_seater_2.png" alt="cloud sofa three seater">
+        </div>
+      </div>
+    </div>
+
+    <div class="related">
+      <p class="txt-w-500 txt-s-36 txt-center">Related Products</p>
+      <div class="products-view"></div>
+      <div class="view-more-btn">
+        <a class="txt-s-20 txt-w-500" href="./shop.html?page=1">View More</a>
+        <hr class="button-line">
       </div>
     </div>
 
