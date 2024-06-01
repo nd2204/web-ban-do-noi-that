@@ -12,12 +12,12 @@ function convert_rating_to_star(rating) {
 
   let frac = rating - Math.floor(rating);
   for (let i = 0; i < Math.floor(rating); ++i) {
-    html += `<img class="star" src="../assets/icons/star-full.svg">\n`;
+    html += `<img class="star" src="assets/icons/star-full.svg">\n`;
   }
   if (frac > 0.75) {
-    html += `<img class="star" src="../assets/icons/star-full.svg">`;
+    html += `<img class="star" src="assets/icons/star-full.svg">`;
   } else if (frac > 0.25) {
-    html += `<img class="star" src="../assets/icons/star-half.svg">\n`;
+    html += `<img class="star" src="assets/icons/star-half.svg">\n`;
   }
   return html;
 }
