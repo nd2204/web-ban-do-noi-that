@@ -1,4 +1,5 @@
 import { money_to_string } from './utils/money.js'
+import { loadJson } from './utils/ajax.js'
 
 function get_layout_classNames(layout) {
   switch (layout) {
@@ -48,24 +49,10 @@ export class Product {
     return this.data[attr];
   }
 }
-
-function loadJson(path) {
-  let xhttp = new XMLHttpRequest();
-  let data;
-  xhttp.onload = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      data = JSON.parse(this.response)
-    }
-  }
-  xhttp.open("GET", path, false);
-  xhttp.send();
-  return data;
-};
-
 // A products loader class that bound to a specific container/selector
 export class ProductsLoader {
   constructor(selector) {
-    this.data = loadJson("../data/products.json")
+    this.data = loadJson("data/products.json")
     this.curIndex = 0;
     this.sel = selector || '.products-view';
     this.container = document.querySelector(this.sel)
