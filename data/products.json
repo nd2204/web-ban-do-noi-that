@@ -4,11 +4,11 @@
     "name": "Trenton modular sofa_3",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/trenton_sofa.png",
-    "gallery": ["./assets/products/trenton_sofa.png"],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "image": "assets/products/trenton_sofa.png",
+    "gallery": ["assets/products/trenton_sofa.png"],
+    "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Trenton_sofa",
-    "sku":"S001",
+    "sku":"TM03",
     "category":"Sofa",
     "variations":{
       "colors": ["#F2DCEB","#BABABA","#FDFF9C"],
@@ -24,13 +24,13 @@
     "name": "Granite dining table with dining chair",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/granite_chair.png",
+    "image": "assets/products/granite_chair.png",
     "gallery": [
-      "./assets/products/granite_chair.png"
+      "assets/products/granite_chair.png"
     ], 
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Granite_table",
-    "sku":"T001",
+    "sku":"G01",
     "category":"Table",
     "variations":{
       "colors": ["#FAC391","#3B3140","FFEEA9"],
@@ -45,9 +45,9 @@
     "name": "Outdoor bar table",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/outdoor_bar_table.png",
+    "image": "assets/products/outdoor_bar_table.png",
     "gallery": [
-      "./assets/products/outdoor_bar_table.png"
+      "assets/products/outdoor_bar_table.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Outdoor_table",
@@ -67,9 +67,9 @@
     "name": "Plain console with teak mirror",
     "currency": "Rs.",
     "price": 25000.00,
-    "image": "./assets/products/planin_mirror.png",
+    "image": "assets/products/planin_mirror.png",
     "gallery": [
-      "./assets/products/planin_mirror.png"
+      "assets/products/planin_mirror.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Plain_mirror",
@@ -89,9 +89,9 @@
     "name": "Grain coffee table",
     "currency": "Rs.",
     "price": 15000.00,
-    "image": "./assets/products/grain_coffee_table.png",
+    "image": "assets/products/grain_coffee_table.png",
     "gallery": [
-      "./assets/products/grain_coffee_table.png"
+      "assets/products/grain_coffee_table.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Grain_table",
@@ -99,7 +99,7 @@
     "category":"Table",
     "variations":{
       "colors": ["FEAE6F","F6DCAC","EEEEEE"],
-      "sizes":["M","L","XL"]
+      "sizes": ["M","L","XL"]
     },
     "rating" : {
       "value": 3.7,
@@ -111,13 +111,13 @@
     "name": "Kent coffee table",
     "currency": "Rs.",
     "price": 225000.00,
-    "image": "./assets/products/kent_coffee_table_1.png",
+    "image": "assets/products/kent_coffee_table_1.png",
     "gallery": [
-      "./assets/products/kent_coffee_table_1.png"
+      "assets/products/kent_coffee_table_1.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Kent_table",
-    "sku":"T004",
+    "sku":"T04",
     "category":"Table",
     "variations":{
       "colors": ["543310","A67B5B","FFDA78"],
@@ -133,11 +133,11 @@
     "name": "Round coffee table",
     "currency": "Rs.",
     "price": 251000.00,
-    "image": "./assets/products/round_coffee_table (Custom).png",
+    "image": "assets/products/round_coffee_table (Custom).png",
     "gallery": [
-      "./assets/products/round_coffee_table (Custom).png"
+      "assets/products/round_coffee_table (Custom).png"
     ],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Round_table",
     "sku":"T005",
     "category":"Table",
@@ -155,18 +155,19 @@
     "name": "Reclaimed teak coffee table",
     "currency": "Rs.",
     "price": 25200.00,
-    "image": "./assets/products/reclaimed_teak_coffee_table.png",
+    "image": "assets/products/reclaimed_teak_sideboard_1.png",
     "gallery": [
       "./assets/products/reclaimed_teak_coffee_table.png"
     ],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Reclaimed_table",
     "sku":"T006",
     "category":"Table",
     "variations":{
       "colors": ["F8C794","D8AE7E","A87676"],
       "sizes":["M","L","XL"]
-    },"rating" : {
+    }
+    ,"rating" : {
       "value": 3.1,
       "count": 17
     }
@@ -176,9 +177,9 @@
     "name": "Plain console",
     "currency": "Rs.",
     "price": 258200.00,
-    "image": "./assets/products/plain_console.png",
+    "image": "assets/products/plain_console.png",
     "gallery": [
-      "./assets/products/plain_console.png"
+      "assets/products/plain_console.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Plain_console",
@@ -198,9 +199,9 @@
     "name": "Reclaimed teak sideboard",
     "currency": "Rs.",
     "price": 20000.00,
-    "image": "./assets/products/reclaimed_teak_sideboard_1.png",
+    "image": "assets/products/reclaimed_teak_sideboard_1.png",
     "gallery": [
-      "./assets/products/reclaimed_teak_sideboard_1.png"
+      "assets/products/reclaimed_teak_sideboard_1.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Reclaimed_sideboard",
@@ -220,9 +221,9 @@
     "name": "SPJ_0825",
     "currency": "Rs.",
     "price": 200000.00,
-    "image": "./assets/products/SJP_0825.png",
+    "image": "assets/products/SJP_0825.png",
     "gallery": [
-      "./assets/products/SJP_0825.png"
+      "assets/products/SJP_0825.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Outdoor_table",
@@ -242,9 +243,9 @@
     "name": "Bella chair and table",
     "currency": "Rs.",
     "price": 100000.00,
-    "image": "./assets/products/bella_chair_and_table.png",
+    "image": "assets/products/bella_chair_and_table.png",
     "gallery": [
-      "./assets/products/bella_chair_and_table.png"
+      "assets/products/bella_chair_and_table.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Bella_chair",
@@ -264,9 +265,9 @@
     "name": "Granite square site table",
     "currency": "Rs.",
     "price": 258800.00,
-    "image": "./assets/products/granite_square_site_table.png",
+    "image": "assets/products/granite_square_site_table.png",
     "gallery": [
-      "./assets/products/granite_square_site_table.png"
+      "assets/products/granite_square_site_table.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Granite_table",
@@ -283,13 +284,13 @@
   },
   {
     "id": "14",
-    "name": "Aagaard sofa",
+    "name": "Asgaard sofa",
     "currency": "Rs.",
     "price": 250000.00,
-    "image": "./assets/products/asgaard_sofa.png",
+    "image": "assets/products/asgaard_sofa.png",
     "gallery": [
       "assets/products/asgaard_sofa/asgaard_sofa.png",
-      "assets/products/asgaard_sofa/granite_dining_table.png",
+      "assets/products/asgaard_sofa/granite_dining_table_and_dining_chair.png",
       "assets/products/asgaard_sofa/group_95.png",
       "assets/products/asgaard_sofa/mask_group.png",
       "assets/products/asgaard_sofa/mask_group_2.png",
@@ -298,11 +299,11 @@
       "assets/products/asgaard_sofa/outdoor_sofa_set_1.png",
       "assets/products/asgaard_sofa/outdoor_sofa_set_2.png",
       "assets/products/asgaard_sofa/stuart_sofa_1.png",
-      "assets/products/asgaard_sofa/trenton_sofa_1.png"
+      "assets/products/asgaard_sofa/trenton_modular_sofa.png"
     ],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Aagaard_sofa",
-    "sku":"S002",
+    "sku":"A002",
     "category":"Sofa",
     "variations":{
       "colors": ["FFEBB2","C08B5C","97E7E1"],
@@ -318,13 +319,13 @@
     "name": "Maya sofa three seater",
     "currency": "Rs.",
     "price": 115000.00,
-    "image": "./assets/products/maya_sofa_three_seater.png",
+    "image": "assets/products/maya_sofa_three_seater.png",
     "gallery": [
-      "./assets/products/maya_sofa_three_seater.png"
+      "assets/products/maya_sofa_three_seater.png"
     ],
-    "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
+    "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Maya_sofa",
-    "sku":"S003",
+    "sku":"MTS03",
     "category":"Sofa",
     "variations":{
       "colors": ["F8F6E3","FDAF7B","FA7070"],
@@ -340,13 +341,13 @@
     "name": "Outdoor sofa set",
     "currency": "Rs.",
     "price": 244000.00,
-    "image": "./assets/products/outdoor_sofa_set.png",
+    "image": "assets/products/outdoor_sofa_set.png",
     "gallery": [
-      "./assets/products/outdoor_sofa_set.png"
+      "assets/products/outdoor_sofa_set.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
     "tags":"Outdoor_sofa",
-    "sku":"S004",
+    "sku":"OS04",
     "category":"Sofa",
     "variations":{
       "colors": ["EEEEEE","00224D","5356FF"],

@@ -73,7 +73,7 @@ header_template.innerHTML = `
     <div class="middle-section">
       <a href="./">Home</a>
       <a href="./shop.html">Shop</a>
-      <a href="./about.html">About</a>
+      <a href="#">About</a>
       <a href="./contact.html">Contact</a>
     </div>
     <div class="right-section">

@@ -131,13 +131,6 @@ input, label {
   background-color: #00000000;
 }
 
-.gallery-prev {
-  /* top: 0; */
-}
-.gallery-next {
-  /* bottom: 0; */
-}
-
 .main-img-ctn {
   display: inline-flex;
   justify-content: center;
@@ -146,7 +139,7 @@ input, label {
   background-color: #FFF9E5;
   height: 100%;
   border-radius: 10px;
-  max-width: 423px;
+  width: 423px;
 }
 
 .main-img-ctn img {
