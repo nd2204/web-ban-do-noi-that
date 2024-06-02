@@ -8,6 +8,60 @@
     <script src="./scripts/header.js"></script>
     <script src="./scripts/footer.js"></script>
     <script src="./scripts/policies.js"></script>
+
+    <style>
+      form {
+        margin: 0;
+      }
+      
+      .main-container {
+        margin: 65px 100px;
+        display: flex;
+        justify-content: center;
+        column-gap: 26px;
+      }
+
+      form .title {
+        display: block;
+      }
+
+      .input-field {
+        margin-top: 36px;
+      }
+
+      .input-field span,
+      .input-field input {
+        display: block;
+      }
+
+      .input-field span{
+        font-weight: 400;
+        font-size: 16;
+        margin-bottom: 22px;
+      }
+
+      .input-field input {
+          border: 1px solid #9F9F9F;
+          width: 100%;
+          box-sizing: border-box;
+          height: 75px;
+          border-radius: 10px;
+      }
+      .check-box {
+      margin-left: 0;
+      width: 30px;
+      height: 27px;
+      margin-top: 42px;
+      background: #FFFFFF;
+      border-radius: 5px;
+      }
+      form {
+        box-sizing: border-box;
+        width: 608px;
+        padding: 35px 109px 58px 75px;
+      }
+
+    </style>
   </head>
   <body>
     <!--Must import header.js for this to work-->
@@ -22,6 +76,55 @@
           <span><a class="txt-w-300 txt-s-16" href="#">My Account</a></span>
         </div>
       </div>
+    </div>
+
+    <div class="main-container">
+      <form id="login-form">
+        <span class="title txt-w-600 txt-s-36">Log In</span>
+        <div class="input-field">
+          <span>Username or email address</span>
+          <input name="fullname" type="text" placeholder="">
+        </div>
+        <div class="input-field">
+          <span>Password</span>
+          <input name="password" type="password" placeholder="">
+        </div>
+        <div class="check-box">
+          <input class="check-box-ctn" type="checkbox" name="remember">
+          <label for="remember" >Remember me</label>
+        </div>
+      </form>
+
+      <form id="signup-form">
+        <span class="title txt-w-600 txt-s-36">Register</span>
+        <div class="input-field">
+          <span>Username or email address</span>
+          <input name="fullname" type="text" placeholder="">
+        </div>
+        <div class="input-field">
+          <span>Password</span>
+          <input name="fullname" type="text" placeholder="">
+        </div>
+      </form>
+
+      <!-- <div class="log-in">
+        
+      </div>  
+        
+
+        <div class="log-in">
+          <label for="password" class="password">Password<sup>*</sup></label>
+          <input name="password" type="password" placeholder="">
+        </div>
+
+        
+        <div class="button-login">
+          <button>Log In</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <span class="psw"><a href="#">Lost your password?</a></span>
+        </div>          -->
     </div>
 
     <!--Must import footer.js for this to work-->
