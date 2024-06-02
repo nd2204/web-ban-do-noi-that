@@ -1,11 +1,11 @@
 <html lang="en">
   <head>
+    <title>Shop</title>
     <meta http-equiv="content-type" content="text/html" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/shop.css">
     <link rel="stylesheet" href="./css/banner.css">
-    <title>Shop</title>
     <script src="./scripts/header.js"></script>
     <script src="./scripts/footer.js"></script>
     <script src="./scripts/policies.js"></script>
@@ -27,13 +27,13 @@
       </div>
     </div>
 
-    <div class="option-bar">
+    <form class="option-bar" id="options">
       <div class="lh-options">
         <img class="icon filter-icon" src="./assets/icons/filtering.svg">
         <span class="txt-s-20">Filter</span>
-        <input type="radio" name="view" value="grid" id="grid" checked>
+        <input type="radio" name="layout" value="grid" id="grid" checked>
         <label for="grid"><img class="icon view grid-icon" src="./assets/icons/grid-big-round.svg"></label>
-        <input type="radio" name="view" value="list" id="list">
+        <input type="radio" name="layout" value="list" id="list">
         <label for="list"><img class="icon list-icon" src="./assets/icons/view-list.svg"></label>
         <div class="filter-result">
           <span id="filter-result"></span>
@@ -41,23 +41,30 @@
       </div>
       <div class="rh-options">
         <label for="show">Show</label>
-        <input class="show-count-input" id="show-count-input" type="number" name="show" value="16">
+        <input class="show-count-input" id="show-count-input" type="number"
+          name="limit" value="16">
         <label for="sort">Sort by</label>
         <select class="sort-sel" name="sort" id="sort">
-          <option value="Default">Default</option>
-          <option value="Alphabetical">Alphabetical</option>
-          <option value="Popularity">Popularity</option>
-          <option value="Rating">Rating</option>
+          <option value="default">Default</option>
+          <option value="alphabetical">Alphabetical</option>
+          <option value="popularity">Popularity</option>
+          <option value="rating">Rating</option>
         </select>
       </div>
-    </div>
+    </form>
 
-    <div class="products-ctn"></div>
+    <div class="products-view"></div>
+
+    <div class="paginate-block">
+      <input type="button" id="paginate-prev" class="paginate-btn hide" value="prev">
+      <a class="paginate-index paginate-btn" href="*?page=1" data-page="1">1</a>
+      <a class="paginate-index paginate-btn" href="#&page=1" data-page="2">2</a>
+      <input type="button" id="paginate-next" class="paginate-btn" value="next">
+    </div>
 
     <!--Must import policies.js for this to work-->
     <policies-component></policies-component>
     <!--Must import footer.js for this to work-->
     <footer-component></footer-component>
   </body>
-
 </html>

@@ -1,38 +1,22 @@
-.products-view {
+/*GRID VIEW*/
+.products-grid-view {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 287px);
+  justify-content: center;
   column-gap: 30px; 
+  row-gap: 15px;
 }
-
 .product-ctn {
   width: 287px;
   height: 397px;
   cursor: pointer;
-  padding: 10px;
-  border: 2px solid #00000000;
-  border-radius: 10px;
-  transition: ease-in-out 0.25s;
 }
 
-.product-ctn:hover {
-  border-color: #9f9f9f;
-  box-shadow: 10px 10px 2px 0 #9f9f9fFF;
-  transition: ease 0.25s;
+.product-ctn .product-info {
+  display: block;
 }
 
-.product-img-ctn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 287px;
-  height: 287px;
-}
-
-.product-img-ctn img {
-  width: 100%;
-}
-
-.product-title {
+.product-ctn .product-title {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -41,9 +25,97 @@
   margin-bottom: 12px
 }
 
-.product-price {
+.product-ctn .product-price {
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   color: #000000;
+}
+
+.product-img-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 287px;
+  height: 287px;
+  border: 2px solid #00000000;
+  border-radius: 10px;
+  transition: ease-in-out 0.15s;
+}
+
+.product-ctn:hover .product-img-ctn {
+  box-shadow: 0px 0px 5px 2px #9f9f9f7A;
+  transition: ease 0.15s;
+}
+
+.product-ctn:active .product-img-ctn {
+  box-shadow: 0px 0px 5px 2px #9f9f9f7A inset;
+}
+
+.product-img-ctn img {
+  width: 100%;
+}
+
+/* LIST VIEW */
+
+.products-list-view {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.product-ctn-list {
+  display: flex;
+  flex-direction: row;
+  height: 287px;
+  border: 1px solid #9F9F9F7A;
+  border-radius: 10px;
+}
+
+.product-ctn-list .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  border-left: 1px solid #9F9F9F7A;
+  height: 100%;
+}
+
+.product-ctn-list .product-title {
+  font-size: 28px;
+  margin-bottom: 12px
+}
+
+.product-ctn-list .product-price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.product-ctn-list:hover {
+  border-color: #00000000;
+  box-shadow: 0px 0px 5px 2px #9f9f9f7A;
+  transition: ease-in-out 0.15s;
+}
+
+.product-ctn-list:active {
+  border-color: #00000000;
+  box-shadow: 0px 0px 5px 2px #9f9f9f7A inset;
+}
+
+.product-img-ctn-list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 287px;
+  height: 287px;
+  border: 2px solid #00000000;
+  border-radius: 10px;
+}
+
+.product-img-ctn-list img {
+  width: 100%;
+  padding: 10px;
 }

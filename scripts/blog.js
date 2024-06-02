@@ -1,3 +1,5 @@
+import { loadJson } from './utils/ajax.js'
+
 function blog_to_html(blog) {
   return `
     <div class="blog-ctn" data-id="${blog.id}">
@@ -19,19 +21,7 @@ const CONTAINER_CLASSNAME = '.blog-view'
 let g_blogs = []
 
 if (g_blogs.length <= 0) {
-  init_blogs();
-}
-
-function init_blogs() {
-  let xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      g_blogs = JSON.parse(this.response)
-    }
-  }
-
-  xhttp.open("GET", "../data/blogs.json", false);
-  xhttp.send();
+  g_blogs = loadJson('data/blogs.json');
 }
 
 export function load_blogs(sel, numListing) {

@@ -1,8 +1,8 @@
-import {load_products} from './product.js'
+import { ProductsLoader } from './product.js'
 import {get_blogs} from './blog.js'
 
-load_products('.products-view', 4);
-let blogs = get_blogs(3);
+let products = new ProductsLoader('.products-view');
+products.load(4);
 
 function format_date(date) {
   let formated = ""
@@ -12,10 +12,10 @@ function format_date(date) {
   return formated + ' ' + date.month + ' ' + date.year
 }
 
+let blogs = get_blogs(3);
 let html = ""
 const container = document.querySelector(".blogs-view")
 for (let i = 0; i < blogs.length; ++i) {
-  let date = blogs[i].date.day
   html += `
     <div class="blog-ctn">
       <div class="blog-img-ctn"><img src="${blogs[i].image}" alt="${blogs.title}"></div>
@@ -34,5 +34,4 @@ for (let i = 0; i < blogs.length; ++i) {
     </div>
   `
 }
-
 container.innerHTML = html;
