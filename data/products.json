@@ -12,7 +12,7 @@
     "category":"Sofa",
     "variations":{
       "colors": ["#F2DCEB","#BABABA","#FDFF9C"],
-      "sizes":["M","L","XL"]
+      "sizes": ["M","L","XL"]
     },
     "rating" : {
       "value": 4.2,

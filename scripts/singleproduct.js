@@ -73,7 +73,7 @@ const querySelectorCallback = {
 
     let html = ""
 
-    const p_sizes = product.variations.size;
+    const p_sizes = product.variations.sizes;
     const p_colors = product.variations.colors;
 
     if (p_sizes) {
