@@ -7,12 +7,12 @@
     "image": "assets/products/trenton_sofa.png",
     "gallery": ["assets/products/trenton_sofa.png"],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Trenton_sofa",
+    "tags":"Trenton_sofa,Chair,Shop",
     "sku":"TM03",
     "category":"Sofa",
     "variations":{
-      "colors": ["#F2DCEB","#BABABA","#FDFF9C"],
-      "sizes": ["M","L","XL"]
+      "colors": ["#F2DCEB","#BABABA","#FDFF9C","6D67E4"],
+      "sizes": ["S","M","L","XL"]
     },
     "rating" : {
       "value": 4.2,
@@ -29,12 +29,12 @@
       "assets/products/granite_chair.png"
     ], 
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Granite_table",
+    "tags":"Granite_table,Chair,Shop",
     "sku":"G01",
     "category":"Table",
     "variations":{
-      "colors": ["#FAC391","#3B3140","FFEEA9"],
-      "sizes":["M","XL","XS"]
+      "colors": ["#FAC391","#3B3140","FFEEA9","D4D925","305F72"],
+      "sizes":["M","L","XL","XS"]
     },
     "rating" : {
       "value": 3.9,
@@ -50,12 +50,12 @@
       "assets/products/outdoor_bar_table.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Outdoor_table",
+    "tags":"Outdoor_table,Home",
     "sku":"T002",
     "category":"Table",
     "variations":{
-      "colors": ["FFEEA9","FFBF78","FF7D29"],
-      "sizes":["S","M","XL"]
+      "colors": ["FFEEA9","FFBF78","FF7D29","3F4E4F"],
+      "sizes":["S","M","XL","XS"]
     },
     "rating" : {
       "value": 4.1,
@@ -72,12 +72,12 @@
       "assets/products/planin_mirror.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Plain_mirror",
+    "tags":"Plain_mirror,Home",
     "sku":"M001",
     "category":"Mirror",
     "variations":{
-      "colors": ["FF9A00","808836","D1D8C5"],
-      "sizes":["S","L","XL"]
+      "colors": ["FF9A00","808836","D1D8C5","B09B71"],
+      "sizes":["S","M","L","XL"]
     },
     "rating" : {
       "value": 4.0,
@@ -94,12 +94,12 @@
       "assets/products/grain_coffee_table.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Grain_table",
+    "tags":"Grain_table,Shop,Home",
     "sku":"T003",
     "category":"Table",
     "variations":{
-      "colors": ["FEAE6F","F6DCAC","EEEEEE"],
-      "sizes": ["M","L","XL"]
+      "colors": ["FEAE6F","F6DCAC","EEEEEE","C8DBBE"],
+      "sizes": ["S","M","L","XL","XS"]
     },
     "rating" : {
       "value": 3.7,
@@ -116,12 +116,12 @@
       "assets/products/kent_coffee_table_1.png"
     ],
     "description": " Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Kent_table",
+    "tags":"Kent_table,Home,Shop",
     "sku":"T04",
     "category":"Table",
     "variations":{
-      "colors": ["543310","A67B5B","FFDA78"],
-      "sizes":["S","L","XS"]
+      "colors": ["543310","A67B5B","FFDA78","FFBABA"],
+      "sizes":["S","M","L","XL","XS"]
     },
     "rating" : {
       "value": 3.5,
@@ -138,12 +138,12 @@
       "assets/products/round_coffee_table (Custom).png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Round_table",
+    "tags":"Round_table,Outside,Home,Shop",
     "sku":"T005",
     "category":"Table",
     "variations":{
-      "colors": ["F8F4E1","C7B7A3","524C42"],
-      "sizes":["M","XL","XS"]
+      "colors": ["C58940","C7B7A3","524C42","D0B8A8"],
+      "sizes":["M","L","XL","XS"]
     },
     "rating" : {
       "value": 4.4,
@@ -160,12 +160,12 @@
       "./assets/products/reclaimed_teak_coffee_table.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Reclaimed_table",
+    "tags":"Reclaimed_table,Home",
     "sku":"T006",
     "category":"Table",
     "variations":{
       "colors": ["F8C794","D8AE7E","A87676"],
-      "sizes":["M","L","XL"]
+      "sizes":["S","M","L","XL"]
     }
     ,"rating" : {
       "value": 3.1,
@@ -204,12 +204,12 @@
       "assets/products/reclaimed_teak_sideboard_1.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Reclaimed_sideboard",
+    "tags":"Reclaimed_sideboard,Home",
     "sku":"S001",
     "category":"Sideboard",
     "variations":{
-      "colors": ["803D3B","AF8260","FFC55A"],
-      "sizes":["M","L","XL"]
+      "colors": ["803D3B","AF8260","FFC55A","1A120B"],
+      "sizes":["S","M","L","XL","XS"]
     },
     "rating" : {
       "value": 4.5,
@@ -226,12 +226,12 @@
       "assets/products/SJP_0825.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Outdoor_table",
+    "tags":"Outdoor_table,Outside,Home,Shop",
     "sku":"T007",
     "category":"Table",
     "variations":{
-      "colors": ["AFD198","D1BB9E","BED7DC"],
-      "sizes":["M","L","XL"]
+      "colors": ["AFD198","D1BB9E","BED7DC","F49D1A","453C67"],
+      "sizes":["M","L","XL","XS"]
     },
     "rating" : {
       "value": 4.8,
@@ -248,12 +248,12 @@
       "assets/products/bella_chair_and_table.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Bella_chair",
+    "tags":"Bella_chair,Table,Outside",
     "sku":"CH001",
     "category":"Chair",
     "variations":{
-      "colors": ["F1EEDC","481E14","0C0C0C"],
-      "sizes":["S","M","L"]
+      "colors": ["C58940","3C2A21","0C0C0C","C8DBBE"],
+      "sizes":["S","M","L","XL","XS"]
     },
     "rating" : {
       "value": 3.2,
@@ -270,12 +270,12 @@
       "assets/products/granite_square_site_table.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Granite_table",
+    "tags":"Granite_table,Home",
     "sku":"T008",
     "category":"Table",
     "variations":{
-      "colors": ["481E14","AF8260","5356FF"],
-      "sizes":["S","M","L"]
+      "colors": ["FAEAB1","AF8260","5356FF","3F4E4F"],
+      "sizes":["S","M","L","XL"]
     },
     "rating" : {
       "value": 3.8,
@@ -302,12 +302,12 @@
       "assets/products/asgaard_sofa/trenton_modular_sofa.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Aagaard_sofa",
+    "tags":"Aagaard_sofa,Chair,Home,Shop",
     "sku":"A002",
-    "category":"Sofa",
+    "category":"Sofas",
     "variations":{
-      "colors": ["FFEBB2","C08B5C","97E7E1"],
-      "sizes":["M","XL","XS"]
+      "colors": ["756AB6","322C2B","E1C78F"],
+      "sizes":["L","XL","XS"]
     },
     "rating" : {
       "value": 4.3,
@@ -324,12 +324,12 @@
       "assets/products/maya_sofa_three_seater.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Maya_sofa",
+    "tags":"Maya_sofa,Home",
     "sku":"MTS03",
     "category":"Sofa",
     "variations":{
-      "colors": ["F8F6E3","FDAF7B","FA7070"],
-      "sizes":["L","XL","XS"]
+      "colors": ["F8F6E3","FDAF7B","FA7070","6D67E4"],
+      "sizes":["S","M","L","XL","XS"]
     },
     "rating" : {
       "value": 4.2,
@@ -346,12 +346,12 @@
       "assets/products/outdoor_sofa_set.png"
     ],
     "description": "Morbi tristique erat libero, eget lacinia ex iaculis ac. Vivamus porttitor molestie ipsum sed malesuada. Pellentesque viverra sollicitudin velit, nec malesuada sapien vehicula eget.",
-    "tags":"Outdoor_sofa",
+    "tags":"Outdoor_sofa,Outside,Shop",
     "sku":"OS04",
     "category":"Sofa",
     "variations":{
-      "colors": ["EEEEEE","00224D","5356FF"],
-      "sizes":["M","L","XL"]
+      "colors": ["EEEEEE","6D67E4","5356FF","00224D"],
+      "sizes":["M","L","XL","XS"  ]
     },
     "rating" : {
       "value": 3.7,
