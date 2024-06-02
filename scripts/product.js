@@ -39,7 +39,8 @@ function init_product() {
   xhttp.send();
 }
 
-export function load_products(sel, numListing) {
+export function load_products(sel, numListing, product_list) {
+  product_list = product_list || g_products;
   // Only add style when loading product to a container
   document.addEventListener("DOMContentLoaded", () => {
     const product_css = "../css/product.css"
@@ -55,7 +56,7 @@ export function load_products(sel, numListing) {
 
   // Initialize if any argument is null/empty
   sel = (sel) ? sel : CONTAINER_CLASSNAME;
-  numListing = (numListing) ? numListing : g_products.length
+  numListing = (numListing) ? numListing : product_list.length
 
   let html = ""
   let container = document.querySelector(sel)
@@ -65,8 +66,8 @@ export function load_products(sel, numListing) {
 
   if (container) {
     for (let i = 0; i < numListing; ++i) {
-      if (g_products[i] && !product_is_in_container(g_products[i], sel)) {
-        html += product_to_html(g_products[i]);
+      if (product_list[i] && !product_is_in_container(product_list[i], sel)) {
+        html += product_to_html(product_list[i]);
         count++;
       }
     }
@@ -78,8 +79,12 @@ export function load_products(sel, numListing) {
   return count
 }
 
+export function filter_product() {
+
+}
+
 export function get_all_products() {
-  return g_products
+  return g_products;
 }
 
 export function get_singleproduct(id) {
