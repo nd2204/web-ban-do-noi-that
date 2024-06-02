@@ -1,4 +1,6 @@
+import { Cart } from './cart.js'
 const header_template = document.createElement('template');
+let g_cart = new Cart();
 
 header_template.innerHTML = `
   <style>
@@ -54,6 +56,27 @@ header_template.innerHTML = `
     cursor: pointer;
   }
 
+  .right-section button#cart {
+    position: relative;
+  }
+
+  .shop-count {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 0;
+    right: 2;
+    background-color: #f40005;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 0 white inset;
+    color: white;
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+
   @media (max-width: 1200px) {
     header {
       justify-content: space-between;
@@ -77,10 +100,19 @@ header_template.innerHTML = `
       <a href="./contact.html">Contact</a>
     </div>
     <div class="right-section">
-      <button onclick="alert('button clicked')"><img class="account-alert-icon" src="assets/icons/account_alert.svg"></button>
-      <button onclick="alert('button clicked')"><img class="search-icon" src="assets/icons/search.svg"></button>
-      <button onclick="alert('button clicked')"><img class="heart-icon" src="assets/icons/heart.svg"></button>
-      <button onclick="alert('button clicked')"><img class="shopping-cart-icon" src="assets/icons/shopping_cart.svg"></button>
+      <button type="button" title="Account Information" onclick="" >
+        <img id="account" class="account-alert-icon" src="assets/icons/account_alert.svg">
+      </button>
+      <button id="search" type="button" title="Search" onclick="alert('button clicked')">
+        <img class="search-icon" src="assets/icons/search.svg">
+      </button>
+      <button id="favorite" type="button" title="Favorited Products" onclick="alert('button clicked')">
+        <img class="heart-icon" src="assets/icons/heart.svg">
+      </button>
+      <button id="cart-btn" type="button" title="Cart" onclick="toggleCart()">
+        <img class="shopping-cart-icon" src="assets/icons/shopping_cart.svg">
+        <div class="" id="shop-count"></div>
+      </button>
     </div>
   </header>
 `
@@ -97,3 +129,220 @@ class Header extends HTMLElement {
 }
 
 customElements.define('header-component', Header)
+
+const cart_ctn = document.createElement('div');
+cart_ctn.innerHTML = `
+<style>
+.overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1001;
+  transition: 0.15s ease-in-out;
+}
+
+.cart {
+  position: fixed;
+  background-color: white;
+  width: 417px;
+  height: 746px;
+  top:0;
+  right: 0;
+  z-index: 1002;
+}
+
+.hide {
+  display: none;
+}
+
+.cart-title {
+  display: flex;
+  margin-top: 28px;
+  margin-left: 23px;
+  margin-right: 40px;
+}
+
+.cart-title p {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: 600;
+  /* Shopping Cart */
+  padding-bottom: 26px;
+  border-bottom: 1px solid #D9D9D9;
+  flex: 1;
+}
+
+.cart-toggler {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  padding-left: 42px;
+  padding-bottom: 36px;
+}
+
+.cart-body {
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;
+  padding-top: 26px;
+  padding-left: 23px;
+  padding-right: 40px;
+  padding-bottom: 26px;
+  overflow-y: scroll;
+  row-gap: 15px;
+  position: relative;
+}
+
+.cart-items {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-height: 121px;
+}
+
+.cart-item-detail {
+  flex: 1;
+  flex-shrink: 0;
+  overflow-x: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.cart-item-img {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  margin-right: 14px;
+}
+
+.cart-item-img img {
+  width: 105px;
+  height: 105px;
+}
+
+.discard-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 121px;
+  padding: 0 16px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.currency {
+  font-size: 12px;
+  font-weight: 500;
+  color: #B88E2F;
+}
+
+.item-price-quantity {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 4px;
+}
+
+.multiply {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 131px; 
+  height: 31px; 
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid black;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 
+}
+
+.cart-btn:hover#view-cart {
+  background-color: black;
+  color: white;
+  transition: 0.15s ease-in;
+}
+
+.cart-btn:hover#checkout {
+  background-color: #B88E2F;
+  color: white;
+  transition: 0.15s ease-in;
+  border-color: #B88E2F;
+}
+
+.cart-action {
+  padding-left: 23px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #D9D9D9;
+}
+
+.cart-action .cart-btn:not(:last-child) {
+  margin-right: 27px;
+}
+
+// .discard-btn:hover {
+//   background-color: lightpink;
+// }
+
+</style>
+<div class="overlay hide" id="overlay"></div>
+<div class="cart hide" id="cart">
+  <div class="cart-title">
+    <p>Shopping Cart</p>
+    <div class="cart-toggler">
+      <img src="assets/icons/shopping_cart_cancel.svg" alt="">
+    </div>
+  </div>
+  <div class="cart-body"></div>
+  <div class="subtotal"></div>
+  <div class="cart-action">
+    <a class="cart-btn" id="view-cart" href="./cart.html">View Cart</a>
+    <a class="cart-btn" id="checkout" href="./checkout.html">Checkout</a>
+  </div>
+</div>
+`
+
+function toggleCart() {
+  let cart = document.getElementById('cart');
+  let overlay = document.getElementById('overlay');
+  const cartBody = document.querySelector('.cart-body');
+  if (cart && overlay) {
+    overlay.classList.toggle('hide');
+    cart.classList.toggle('hide');
+  }
+  g_cart.renderItems(cartBody);
+}
+
+window.toggleCart = toggleCart;
+
+window.addEventListener("DOMContentLoaded", function(event) {
+  document.body.appendChild(cart_ctn)
+
+  console.log("Cart Info: ", g_cart.get_cart())
+  const cartToggler = document.querySelector('.cart-toggler');
+  if (cartToggler) {
+    cartToggler.addEventListener("click", toggleCart);
+  }
+})

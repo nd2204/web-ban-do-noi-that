@@ -1,3 +1,6 @@
+import { ProductsLoader } from './product.js'
+import { money_to_string } from './utils/money.js';
+
 if (!window.localStorage) {
   throw Error("Browser not supported")
 }
@@ -34,20 +37,67 @@ export class Cart {
     }
   }
 
-  save() {
-    storage.setItem("cart", JSON.stringify(this.cart))
+  remove(id) {
+    if (this.cart[`${id}`]) delete this.cart[`${id}`]
+    this.save()
+  }
+  save() { storage.setItem("cart", JSON.stringify(this.cart)) }
+  update() { this.cart = JSON.parse(storage.getItem('cart')) }
+  get_cart() { this.update(); return this.cart; }
+  count() { return Object.keys(this.cart).length; }
+  clear() { this.cart = {}; storage.removeItem('cart'); }
+  get_item(id) { this.update(); return this.cart[`${id}`]; }
+
+  get_subtotal() {
+    this.update()
+    let acc = 0;
+    for (let [k, v] of Object.entries(this.cart)) {
+      let loader = new ProductsLoader()
+      let product = loader.getSingleproduct(k)
+      acc += product.price;
+    }
+    return acc;
   }
 
-  get_cart() {
-    return this.cart;
+  renderItems(container) {
+    this.update()
+    let loader = new ProductsLoader()
+    let html = "";
+    let product;
+    if (container) {
+      for (let [k, v] of Object.entries(this.cart)) {
+        let quantity = 0;
+        v.forEach(variation => { quantity += parseInt(variation.quantity) });
+        product = loader.getSingleproduct(k)
+        html += `
+          <div class="cart-items">
+            <div class="cart-item-img">
+              <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="cart-item-detail">
+              <p class="txt-s-16">${product.name}</p>
+              <p class="item-price-quantity">
+                <span>${quantity}</span>
+                <span class="multiply">X</span>
+                <span class="currency">${money_to_string(product.price, product.currency)}</span>
+              </p>
+            </div>
+            <div class="discard-btn" data-id="${product.id}"><img src="assets/icons/close.svg" alt=""></div>
+          </div>
+        `
+      }
+      container.innerHTML = html;
+    }
+
+    const discard_buttons = document.querySelectorAll('.discard-btn')
+    if (discard_buttons) {
+      discard_buttons.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+          this.remove(btn.getAttribute('data-id'))
+          this.renderItems(container);
+        })
+      })
+    }
   }
 
-  clear() {
-    this.cart = {}
-    storage.removeItem('cart')
-  }
-
-  get_item(id) {
-    return this.cart[`${id}`]
-  }
 }
