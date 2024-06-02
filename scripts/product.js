@@ -45,6 +45,10 @@ export class Product {
     `;
   }
 
+  get_gallery() {
+    return this.data.gallery;
+  }
+
   get_property(attr) {
     return this.data[attr];
   }
@@ -104,7 +108,7 @@ export class ProductsLoader {
 
   getSingleproduct(id) {
     for (let p of this.data) {
-      if (p.id == id) return p;
+      if (p.id == id) return new Product(p);
     }
     return null;
   }
