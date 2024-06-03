@@ -2,7 +2,7 @@ import { ProductsLoader } from './product.js'
 import { money_to_string } from './utils/money.js'
 import { Cart } from './cart.js'
 
-let cart = new Cart()
+var g_cart = new Cart()
 
 function hex_to_alnum(hex_string) {
   return hex_string.replace('#', '')
@@ -83,7 +83,7 @@ const querySelectorCallback = {
       `
       product.variations.sizes.forEach((size) => {
         html += `
-          <input type="radio" name="size" value="${size}" id="size-${size}" required>
+          <input type="radio" name="size" value="${size}" id="size-${size}">
           <label class="size" for="size-${size}">${size}</label>
         `
       })
@@ -98,7 +98,7 @@ const querySelectorCallback = {
       product.variations.colors.forEach((color) => {
         let hexValue = hex_to_alnum(color)
         html += `
-          <input type="radio" name="color" value="${hexValue}" id="${hexValue}" required>
+          <input type="radio" name="color" value="${hexValue}" id="${hexValue}">
           <label class="color" for="${hexValue}" style="background-color: ${color}"></label>
         `
       })
@@ -125,21 +125,29 @@ const querySelectorCallback = {
 
       let data = new FormData(form);
       if (product.variations) {
-        if (product.variations.colors && !data.get('color')) {
-          alert("Please pick a color."); return;
-        }
         if (product.variations.sizes && !data.get('size')) {
           alert("Please pick a size."); return;
         }
+        if (product.variations.colors && !data.get('color')) {
+          alert("Please pick a color."); return;
+        }
       }
 
-      cart.add(product.id, {
+      const subtotal = document.querySelectorAll('.js-cart-subtotal');
+      if (subtotal) {
+        subtotal.forEach(s => {
+          s.innerText = money_to_string(g_cart.get_cart_subtotal(), 'Rs.');
+          g_cart.register_cart_subtotal(s);
+        })
+      }
+
+      g_cart.add(product.id, {
         size: data.get('size'),
         color: data.get('color'),
         quantity: data.get('quantity')
       })
 
-      cart.save();
+      console.log(localStorage.getItem('cart'))
     })
   },
 }
