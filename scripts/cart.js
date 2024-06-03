@@ -13,7 +13,7 @@ export class Cart {
     const cart_string = storage.getItem('cart')
     if (!cart_string)
       storage.setItem('cart', '{}')
-    this.cart = JSON.parse((cart_string) ? cart_string : {});
+    this.cart = JSON.parse((cart_string) ? cart_string : "{}");
     this.cart_subtotal_listeners = new Set();
     this.item_subtotal_listeners = {};
   }
