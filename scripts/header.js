@@ -1,4 +1,5 @@
 import { Cart } from './cart.js'
+import { money_to_string } from './utils/money.js'
 const header_template = document.createElement('template');
 let g_cart = new Cart();
 
@@ -100,8 +101,10 @@ header_template.innerHTML = `
       <a href="./contact.html">Contact</a>
     </div>
     <div class="right-section">
-      <button type="button" title="Account Information" onclick="" >
-        <img id="account" class="account-alert-icon" src="assets/icons/account_alert.svg">
+      <button type="button" title="Account Information">
+        <a href="./account.html">
+          <img id="account" class="account-alert-icon" src="assets/icons/account_alert.svg">
+        </a>
       </button>
       <button id="search" type="button" title="Search" onclick="alert('button clicked')">
         <img class="search-icon" src="assets/icons/search.svg">
@@ -145,6 +148,9 @@ cart_ctn.innerHTML = `
 }
 
 .cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   background-color: white;
   width: 417px;
@@ -163,6 +169,7 @@ cart_ctn.innerHTML = `
   margin-top: 28px;
   margin-left: 23px;
   margin-right: 40px;
+  margin-bottom: 23px;
 }
 
 .cart-title p {
@@ -185,17 +192,23 @@ cart_ctn.innerHTML = `
   padding-bottom: 36px;
 }
 
+.cart-body-wrapper {
+  position: relative;
+  overflow-y: scroll;
+  flex: 1;
+}
+
 .cart-body {
   display: flex;
+  position: absolute;
   flex-direction: column;
   // justify-content: flex-start;
-  padding-top: 26px;
-  padding-left: 23px;
-  padding-right: 40px;
-  padding-bottom: 26px;
   overflow-y: scroll;
   row-gap: 15px;
-  position: relative;
+  padding-top: 3px;
+  padding-left: 23px;
+  padding-right: 40px;
+  padding-bottom: 3px;
 }
 
 .cart-items {
@@ -222,6 +235,8 @@ cart_ctn.innerHTML = `
 
 .cart-item-img {
   display: flex;
+  width: 105px;
+  height: 105px;
   justify-content: center;
   // align-items: center;
   margin-right: 14px;
@@ -229,7 +244,6 @@ cart_ctn.innerHTML = `
 
 .cart-item-img img {
   width: 105px;
-  height: 105px;
 }
 
 .discard-btn {
@@ -246,6 +260,15 @@ cart_ctn.innerHTML = `
   font-size: 12px;
   font-weight: 500;
   color: #B88E2F;
+}
+
+.cart-subtotal {
+  margin-left: 24px;
+  margin-right: 40px;
+  margin-bottom: 23px;
+  margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .item-price-quantity {
@@ -291,9 +314,6 @@ cart_ctn.innerHTML = `
   padding-left: 23px;
   padding-top: 26px;
   padding-bottom: 26px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   border-top: 1px solid #D9D9D9;
 }
@@ -309,17 +329,26 @@ cart_ctn.innerHTML = `
 </style>
 <div class="overlay hide" id="overlay"></div>
 <div class="cart hide" id="cart">
-  <div class="cart-title">
-    <p>Shopping Cart</p>
-    <div class="cart-toggler">
-      <img src="assets/icons/shopping_cart_cancel.svg" alt="">
+  <div>
+    <div class="cart-title">
+      <p>Shopping Cart</p>
+      <div class="cart-toggler">
+        <img src="assets/icons/shopping_cart_cancel.svg" alt="">
+      </div>
     </div>
   </div>
-  <div class="cart-body"></div>
-  <div class="subtotal"></div>
-  <div class="cart-action">
-    <a class="cart-btn" id="view-cart" href="./cart.html">View Cart</a>
-    <a class="cart-btn" id="checkout" href="./checkout.html">Checkout</a>
+  <div class="cart-body-wrapper" style="flex:1">
+    <div class="cart-body" id="cart-body"></div>
+  </div>
+  <div>
+    <div class="cart-subtotal">
+      <span class="flex-center">Subtotal</span>
+      <span class="price-medium js-cart-subtotal"></span>
+    </div>
+    <div class="cart-action">
+      <a class="cart-btn" id="view-cart" href="./cart.html">View Cart</a>
+      <a class="cart-btn" id="checkout" href="./checkout.html">Checkout</a>
+    </div>
   </div>
 </div>
 `
@@ -327,20 +356,29 @@ cart_ctn.innerHTML = `
 function toggleCart() {
   let cart = document.getElementById('cart');
   let overlay = document.getElementById('overlay');
-  const cartBody = document.querySelector('.cart-body');
   if (cart && overlay) {
     overlay.classList.toggle('hide');
     cart.classList.toggle('hide');
   }
+  // Re-render the cart
+  const cartBody = document.querySelector('.cart-body');
   g_cart.renderItems(cartBody);
 }
 
 window.toggleCart = toggleCart;
+document.body.appendChild(cart_ctn)
 
 window.addEventListener("DOMContentLoaded", function(event) {
-  document.body.appendChild(cart_ctn)
-
   console.log("Cart Info: ", g_cart.get_cart())
+
+  const subtotal = document.querySelectorAll('.js-cart-subtotal');
+  if (subtotal) {
+    subtotal.forEach(s => {
+      s.innerText = money_to_string(g_cart.get_cart_subtotal(), 'Rs.');
+      g_cart.register_cart_subtotal(s);
+    })
+  }
+
   const cartToggler = document.querySelector('.cart-toggler');
   if (cartToggler) {
     cartToggler.addEventListener("click", toggleCart);

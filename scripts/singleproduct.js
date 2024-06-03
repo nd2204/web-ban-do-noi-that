@@ -2,7 +2,7 @@ import { ProductsLoader } from './product.js'
 import { money_to_string } from './utils/money.js'
 import { Cart } from './cart.js'
 
-let cart = new Cart()
+var g_cart = new Cart()
 
 function hex_to_alnum(hex_string) {
   return hex_string.replace('#', '')
@@ -133,13 +133,20 @@ const querySelectorCallback = {
         }
       }
 
-      cart.add(product.id, {
+      const subtotal = document.querySelectorAll('.js-cart-subtotal');
+      if (subtotal) {
+        subtotal.forEach(s => {
+          s.innerText = money_to_string(g_cart.get_cart_subtotal(), 'Rs.');
+          g_cart.register_cart_subtotal(s);
+        })
+      }
+
+      g_cart.add(product.id, {
         size: data.get('size'),
         color: data.get('color'),
         quantity: data.get('quantity')
       })
 
-      cart.save();
       console.log(localStorage.getItem('cart'))
     })
   },

@@ -1,6 +1,8 @@
 import { ProductsLoader } from './product.js'
 import { money_to_string } from './utils/money.js';
 
+var loader = new ProductsLoader()
+
 if (!window.localStorage) {
   throw Error("Browser not supported")
 }
@@ -8,86 +10,123 @@ if (!window.localStorage) {
 const storage = window.localStorage
 export class Cart {
   constructor() {
-    this.cart = {};
-    if (storage.getItem('cart')) {
-      this.cart = JSON.parse(storage.getItem('cart'));
-      return;
-    }
+    const cart_string = storage.getItem('cart')
+    if (!cart_string)
+      storage.setItem('cart', '{}')
+    this.cart = JSON.parse((cart_string) ? cart_string : {});
+    this.cart_subtotal_listeners = new Set();
+    this.item_subtotal_listeners = {};
   }
 
-  add(id, options) {
-    if (!this.get_item(id)) {
-      this.cart[`${id}`] = [options];
-    }
-    else {
-      const product_opt = this.get_item(id)
-      for (let i = 0; i < product_opt.length; ++i) {
-        if (product_opt[i].size == options.size
-            && product_opt[i].color == options.color
-            && product_opt[i].quantity != options.quantity) {
-          this.cart[`${id}`][i].quantity = options.quantity
-          return
-        }
-        else if (JSON.stringify(product_opt[i]) === JSON.stringify(options)) {
-          return
-        }
-
-      }
-      this.cart[`${id}`].push(options);
-    }
-  }
-
-  remove(id) {
-    if (this.cart[`${id}`]) delete this.cart[`${id}`]
-    this.save()
-  }
   save() { storage.setItem("cart", JSON.stringify(this.cart)) }
   update() { this.cart = JSON.parse(storage.getItem('cart')) }
-  get_cart() { this.update(); return this.cart; }
-  count() { return Object.keys(this.cart).length; }
   clear() { this.cart = {}; storage.removeItem('cart'); }
-  get_item(id) { this.update(); return this.cart[`${id}`]; }
 
-  get_subtotal() {
+  //------------------------------------------------------------
+  // GETTERS
+  //------------------------------------------------------------
+  get_cart() {
+    this.update();
+    return this.cart;
+  }
+
+  get_cart_subtotal() {
     this.update()
     let acc = 0;
     for (let [k, v] of Object.entries(this.cart)) {
-      let loader = new ProductsLoader()
       let product = loader.getSingleproduct(k)
-      acc += product.price;
+      acc += product.price * v.quantity;
     }
     return acc;
   }
 
+  get_cart_quantity() {
+    this.update()
+    let acc = 0;
+    for (let [k, v] of Object.entries(this.cart)) {
+      acc += v.quantity;
+    }
+    return acc;
+  }
+
+  get_item(id) {
+    this.update();
+    return this.cart[`${id}`];
+  }
+
+  get_item_subtotal(id) {
+    this.update();
+    let product = loader.getSingleproduct(id)
+    return this.get_item_quantity(id) * product.price;
+  }
+
+  get_item_quantity(id) {
+    this.update();
+    if (typeof id !== 'string') return
+    let item = this.get_item(id)
+    if (!item) return;
+    let acc = 0;
+    acc += parseInt(item.quantity);
+    return acc;
+  }
+
+  count() {
+    this.update();
+    return Object.keys(this.cart).length;
+  }
+
+  //------------------------------------------------------------
+  // SETTERS 
+  //------------------------------------------------------------
+  add(id, options) {
+    this.update();
+    this.cart[`${id}`] = options;
+    this.save();
+    this.onUpdate();
+  }
+
+  remove(id) {
+    this.update();
+    if (this.cart[`${id}`]) delete this.cart[`${id}`]
+    this.save()
+    this.onUpdate();
+  }
+
+  updateQuantity(id, quantity) {
+    this.update();
+    this.cart[id + ''].quantity = quantity;
+    this.save();
+    this.onUpdate();
+  }
+
+  //------------------------------------------------------------
+  // UTIL
+  //------------------------------------------------------------
   renderItems(container) {
     this.update()
-    let loader = new ProductsLoader()
     let html = "";
     let product;
-    if (container) {
-      for (let [k, v] of Object.entries(this.cart)) {
-        let quantity = 0;
-        v.forEach(variation => { quantity += parseInt(variation.quantity) });
-        product = loader.getSingleproduct(k)
-        html += `
-          <div class="cart-items">
-            <div class="cart-item-img">
-              <img src="${product.image}" alt="${product.name}">
-            </div>
-            <div class="cart-item-detail">
-              <p class="txt-s-16">${product.name}</p>
-              <p class="item-price-quantity">
-                <span>${quantity}</span>
-                <span class="multiply">X</span>
-                <span class="currency">${money_to_string(product.price, product.currency)}</span>
-              </p>
-            </div>
-            <div class="discard-btn" data-id="${product.id}"><img src="assets/icons/close.svg" alt=""></div>
+    if (!container) return
+    for (let [k, v] of Object.entries(this.cart)) {
+      product = loader.getSingleproduct(k)
+      html += `
+        <div class="cart-items">
+          <div class="cart-item-img flex-center">
+            <img src="${product.image}" alt="${product.name}">
           </div>
-        `
-      }
-      container.innerHTML = html;
+          <div class="cart-item-detail">
+            <p class="txt-s-16">${product.name}</p>
+            <p class="item-price-quantity">
+              <span>${v.quantity}</span>
+              <span class="multiply">X</span>
+              <span class="currency">${money_to_string(product.price, product.currency)}</span>
+            </p>
+          </div>
+          <div class="discard-btn" data-id="${product.id}"><img src="assets/icons/close.svg" alt=""></div>
+        </div>
+      `
     }
+    container.innerHTML = html;
 
     const discard_buttons = document.querySelectorAll('.discard-btn')
     if (discard_buttons) {
@@ -95,9 +134,47 @@ export class Cart {
         btn.addEventListener("click", (event) => {
           this.remove(btn.getAttribute('data-id'))
           this.renderItems(container);
+          this.onUpdate();
         })
       })
     }
   }
 
+  //------------------------------------------------------------
+  // OBSERVER REGISTRAR
+  //------------------------------------------------------------
+  register_cart_subtotal(container) {
+    if (!container) return;
+    this.cart_subtotal_listeners.add(container)
+  }
+
+  register_item_subtotal(id, container) {
+    if (!container || !id) return;
+    this.item_subtotal_listeners[id+''] = container
+  }
+
+  //------------------------------------------------------------
+  // CART UPDATE EVENT HANDLERS
+  //------------------------------------------------------------
+  onUpdate() {
+    console.log("cart onUpdate called")
+    this.cart_subtotal_listeners.forEach(element => {
+      element.innerText = money_to_string(this.get_cart_subtotal(), "Rs.")
+    });
+    let iterListener = this.cart_subtotal_listeners.entries()
+    for (const entry of iterListener){
+      entry.innerText = money_to_string(
+        this.get_cart_subtotal(),
+        "Rs."
+      )
+    }
+    let iterPairListener = Object.entries(this.item_subtotal_listeners)
+    for (let [id, container] of iterPairListener) {
+      container.innerText = money_to_string(
+        this.get_item_subtotal(id),
+        "Rs."
+      )
+    }
+  }
 }
+
