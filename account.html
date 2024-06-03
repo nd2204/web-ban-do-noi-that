@@ -1,67 +1,15 @@
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>My Account</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/banner.css">
-    <title>My Account</title>
+    <link rel="stylesheet" href="./css/account.css">
     <script type="module" src="./scripts/header.js"></script>
     <script type="module" src="./scripts/footer.js"></script>
     <script src="./scripts/policies.js"></script>
-
-    <style>
-      form {
-        margin: 0;
-      }
-
-      .main-container {
-        margin: 65px 100px;
-        display: flex;
-        justify-content: center;
-        column-gap: 26px;
-      }
-
-      form .title {
-        display: block;
-      }
-
-      .input-field {
-        margin-top: 36px;
-      }
-
-      .input-field span,
-      .input-field input {
-        display: block;
-      }
-
-      .input-field span{
-        font-weight: 400;
-        font-size: 16;
-        margin-bottom: 22px;
-      }
-
-      .input-field input {
-          border: 1px solid #9F9F9F;
-          width: 100%;
-          box-sizing: border-box;
-          height: 75px;
-          border-radius: 10px;
-      }
-      .check-box {
-      margin-left: 0;
-      width: 30px;
-      height: 27px;
-      margin-top: 42px;
-      background: #FFFFFF;
-      border-radius: 5px;
-      }
-      form {
-        box-sizing: border-box;
-        width: 608px;
-        padding: 35px 109px 58px 75px;
-      }
-
-    </style>
+    <script src="./scripts/account.js"></script>
   </head>
   <body>
     <!--Must import header.js for this to work-->
@@ -79,52 +27,43 @@
     </div>
 
     <div class="main-container">
-      <form id="login-form">
+      <form class="flex-input" id="login-form">
         <span class="title txt-w-600 txt-s-36">Log In</span>
         <div class="input-field">
-          <span>Username or email address</span>
-          <input name="fullname" type="text" placeholder="">
+          <label for="username">Username or email address</label>
+          <input name="username" type="text" placeholder="" required>
         </div>
         <div class="input-field">
-          <span>Password</span>
-          <input name="password" type="password" placeholder="">
+          <label>Password</label>
+          <input name="password" type="password" placeholder="" required>
         </div>
-        <div class="check-box">
-          <input class="check-box-ctn" type="checkbox" name="remember">
-          <label for="remember" >Remember me</label>
+        <div class="check-box-ctn">
+          <input class="check-box" type="checkbox" name="remember" id="remember">
+          <label for="remember">Remember me</label>
         </div>
+        <div>
+          <button class="input-field" type="submit">Login</button>
+          <a href="#" style="margin-left: 32px; jjjjjjfont-weight: 300;">Lost your password?</a>
+      </div>
       </form>
 
-      <form id="signup-form">
+      <form class="flex-input" id="signup-form">
         <span class="title txt-w-600 txt-s-36">Register</span>
         <div class="input-field">
-          <span>Username or email address</span>
-          <input name="fullname" type="text" placeholder="">
+          <label for="email">Email address</label>
+          <input name="email" id="email" type="text" placeholder="" required>
+        </div>
+        <div class="info">
+          <p>A link to set a new password will be sent to your email address.</p>
+          <p>Your personal data will be used to support your experience
+            throughout this website, to manage access to your account, and for
+            other purposes described in our <a href="#"><strong>privacy
+              policy.<strong></a></p>
         </div>
         <div class="input-field">
-          <span>Password</span>
-          <input name="fullname" type="text" placeholder="">
+          <button class="input-field" type="submit">Register</button>
         </div>
       </form>
-
-      <!-- <div class="log-in">
-        
-      </div>  
-        
-
-        <div class="log-in">
-          <label for="password" class="password">Password<sup>*</sup></label>
-          <input name="password" type="password" placeholder="">
-        </div>
-
-        
-        <div class="button-login">
-          <button>Log In</button>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <span class="psw"><a href="#">Lost your password?</a></span>
-        </div>          -->
     </div>
 
     <!--Must import footer.js for this to work-->
