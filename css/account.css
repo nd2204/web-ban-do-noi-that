@@ -1,0 +1,94 @@
+form {
+  margin: 0;
+}
+
+.main-container {
+  margin: 65px 100px;
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+}
+
+form .title {
+  display: block;
+}
+
+.input-field label,
+.input-field input {
+  display: block;
+}
+
+.input-field label{
+  font-weight: 500;
+  font-size: 16;
+  margin-bottom: 22px;
+}
+
+.input-field input {
+  border: 1px solid #9F9F9F;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  height: 75px;
+  border-radius: 10px;
+}
+
+.check-box {
+  margin-left: 0;
+  margin-right: 21px;
+  width: 30px;
+  height: 27px;
+  border-radius: 5px;
+  border: 1px solid #9F9F9F;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.check-box-ctn {
+  display: flex;
+  align-items: center;
+}
+
+form {
+  box-sizing: border-box;
+  width: 608px;
+  padding: 35px 109px 58px 75px;
+}
+
+button[type="submit"] {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 215px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #00000000;
+  cursor: pointer;
+  font-size: 20px;
+}
+button[type="submit"]:hover {
+  background: #000000;
+  color: white;
+  transition: 0.15s ease;
+}
+
+.flex-input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
+
+.info p {
+  text-align: justify;
+  line-height: 24px;
+  font-weight: 300;
+}
+.info p:not(:last-child) {
+  margin-bottom: 16px;
+}
