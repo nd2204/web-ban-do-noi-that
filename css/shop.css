@@ -119,6 +119,7 @@ input[type="radio"]:checked + label img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  column-gap: 38px;
 }
 
 .paginate-btn {
@@ -147,17 +148,11 @@ input[type="radio"]:checked + label img {
 #paginate-prev {
   padding-left: 29px;
   padding-right: 29px;
-  margin-right: 38px;
 }
 
 #paginate-next {
   padding-left: 29px;
   padding-right: 29px;
-  margin-left: 38px;
-}
-
-.paginate-block .paginate-index:not(:first-child) {
-  margin-left: 38px;
 }
 
 /* .hide { */

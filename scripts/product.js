@@ -2,20 +2,20 @@ import { money_to_string } from './utils/money.js'
 import { loadJson } from './utils/ajax.js'
 
 function get_layout_classNames(layout) {
-  switch (layout) {
-    case 'list':
-      return {
-        ctn: 'products-list-view',
-        product_ctn: 'product-ctn-list',
-        img_ctn:'product-img-ctn-list'
-      }
-    default:
-      return {
-        ctn: 'products-grid-view',
-        product_ctn: 'product-ctn',
-        img_ctn:'product-img-ctn'
-      }
-  }
+  layout = layout || 'grid'
+  const layouts = {
+    'list': {
+      ctn: 'products-list-view',
+      product_ctn: 'product-ctn-list',
+      img_ctn:'product-img-ctn-list'
+    },
+    'grid': {
+      ctn: 'products-grid-view',
+      product_ctn: 'product-ctn',
+      img_ctn:'product-img-ctn'
+    }
+  };
+  return layouts[layout]
 }
 
 export class Product {
@@ -31,18 +31,18 @@ export class Product {
 
   toHtml(className) {
     return `
-      <div data-id="${this.data.id}">
-        <a class="${className.product_ctn}" href="./singleproduct.html?id=${this.data.id}">
-          <div class="${className.img_ctn}">
-            <img src="${this.data.image}" alt="${this.data.name}">
-          </div>
-          <div class="product-info">
-            <p class="product-title">${this.data.name}</p>
-            <p class="product-price">${money_to_string(this.data.price, this.data.currency)}</p>
-          </div>
-        </a>
-      </div>
-    `;
+<div data-id="${this.data.id}">
+<a class="${className.product_ctn}" href="./singleproduct.html?id=${this.data.id}">
+<div class="${className.img_ctn}">
+<img src="${this.data.image}" alt="${this.data.name}">
+</div>
+<div class="product-info">
+<p class="product-title">${this.data.name}</p>
+<p class="product-price">${money_to_string(this.data.price, this.data.currency)}</p>
+</div>
+</a>
+</div>
+`;
   }
 
   get_property(attr) {
@@ -65,8 +65,13 @@ export class ProductsLoader {
     return this.load(numListing, layout, product_list);
   }
 
-  load(numListing, layout, product_list) {
+  load(numListing, layout, offset, product_list) {
     // Only add style when loading product to a container
+    this.curIndex = (isNaN(offset)) ? this.curIndex : offset;
+    product_list = product_list || this.data;
+    numListing = (numListing) ? numListing : product_list.length
+    layout = layout || 'grid';
+
     if (!this.container) throw Error("Can not find matching selector");
     const product_css = "css/product.css"
     if (!document.querySelector(`link[href="${product_css}"]`)) {
@@ -77,14 +82,9 @@ export class ProductsLoader {
     }
 
     const classNames = get_layout_classNames(layout);
-    product_list = product_list || this.data;
-
     let count = 0;
-    // Initialize if any argument is null/empty
-    numListing = (numListing) ? numListing : product_list.length
-
     if (!this.container.classList.contains(classNames.ctn)) {
-      this.container.classList.add(classNames.ctn);
+      this.container.className = this.sel.replace('.', '') + ' ' + classNames.ctn;
     }
 
     let html = ""

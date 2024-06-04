@@ -13,7 +13,6 @@ footer_template.innerHTML = `
       padding: 98px 100px 38px;
     }
 
-
     .copyright-text {
       font-size: 1rem;
     }
@@ -123,7 +122,7 @@ footer_template.innerHTML = `
       </div> 
     </div>
     <hr>
-    <p class="copyright-text">2022 Meubel House. All rights reverved</p>
+    <p class="copyright-text txt-s-16">2022 Meubel House. All rights reverved</p>
   </footer>
 `;
 

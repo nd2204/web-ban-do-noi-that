@@ -21,7 +21,7 @@ for (let i = 0; i < blogs.length; ++i) {
       <div class="blog-img-ctn"><img src="${blogs[i].image}" alt="${blogs.title}"></div>
       <p class="blog-title">${blogs[i].title}</p>
       <div class="read-more-btn">
-        <a href="./blog.html">Read More</a><hr>
+        <a href="#">Read More</a><hr>
       </div>
       <div class="blog-duration">
         <img class="clock-icon" src="./assets/icons/clock.svg">
