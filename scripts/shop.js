@@ -85,7 +85,7 @@ function generatePageCount(opts, container) {
   let currentPage = "paginate-current"
   for (let i = 1; i <= calculatePageCount(opts); ++i) {
     let link = getLink(opts).replace(/page=[0-9]*/, `page=${i}`)
-    html += `<a class="paginate-index paginate-btn ${(i == opts.page) ? currentPage : ''}" href="${link}">${i}</a>`
+    html += `<a class="paginate-index paginate-btn ${(i == opts.page) ? currentPage : ''}" href="${link+"#options"}">${i}</a>`
   }
   container.innerHTML = `
     <input type="button" id="paginate-prev" class="paginate-btn hide" value="prev">
