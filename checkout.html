@@ -1,16 +1,24 @@
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>Checkout</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/banner.css">
-    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/form.css">
     <script type="module" src="scripts/header.js"></script>
     <script type="module" src="scripts/footer.js"></script>
+    <script type="module" src="scripts/checkout.js"></script>
+    <script src="scripts/policies.js"></script>
   </head>
+  <style>
+    
+  </style>
   <body>
     <!--Must import header.js for this to work-->
     <header-component></header-component>
+
     <div class="banner">
       <img class="banner-background" src="./assets/imgs/thumbnail_breadcrumb.jpg">
       <div>
@@ -22,88 +30,106 @@
         </div>
       </div>
     </div>
-    <div class="">
-      <form action="">
+
+    <form id="checkout-form">
+
+      <div class="form-left flex-input">
         <span class="title txt-w-600 txt-s-36">Billing details</span>
-        <div class="input-infor">
-          <label for="firstname">First Name</label>
-          <input name="firstname" type="text" placeholder="">
-          <label for="lastname">Last Name</label>
-          <input name="lastname" type="text" placeholder="">
-          <br>
-          <label for="companyname">Compeny Name(Optional)</label>
-          <input name="companyname" type="text" placeholder="">
-          <br>
-          <label for="Contry">Contry/Region</label>
-          <select name="country" id="Contry">
-            <option value=""></option>
-            <option value="srilanka">Sri Lanka</option>
-            <option value="china">China</option>
-            <option value="australia">Australia</option>
-            <option value="iraq">Iraq</option>
-            <option value="cambodia">Cambodia</option>
-            <option value="vietnam">Viet Nam</option>
-        </select>
-        <br>
-        <label for="street-address">Street Address</label>
-        <input name="street-address" type="text" placeholder="">
-        <br>
-        <label for="town-city">Town / City</label>
-        <input name="town-city" type="text" placeholder="">
-        <br>
-        <label for="province">Province</label>
-          <select name="country" id="Contry">
-            <option value=""></option>
-            <option value="shanghai">Shanghai</option>
-            <option value="hanoi">Ha Noi</option>
-            <option value="sydney">Sydney</option>
-            <option value="baghdad">Baghdad</option>
-            <option value="phnom-penh">Phnom Penh</option>
-            <option value="melbourne">Melbourne</option>
-        </select>
-        <br>
-        <label for="zip-code">Zip code</label>
-        <input name="zip-code" type="text" placeholder="">
-        <br>
-        <label for="phone">Phone</label>
-        <input name="phone" type="text" placeholder="">
-        <br>
-        <label for="email-address">Email address</label>
-        <input name="email-address" type="text" placeholder="">
-        <br>
-        <label for="additional-infor"></label>
-        <input name="additional-infor" type="text" placeholder="Additional information">
-        </div>
-        <div>
-          <table>
-            <tr>
-              <th>Product</th>
-              <th>Subtotal</th>
-            </tr>
-            <tr>
-              <th>Asgaard sofa x1</th>
-              <th>Rs.250,000.00</th>
-            </tr>
-            <tr>
-              <th>Subtotal</th>
-              <th>Rs.250,000.00</th>
-            </tr>
-            <tr>
-              <th>Total</th>
-              <th>Rs.250,000.00</th>
-            </tr>
-          </table>
-          <div>
-          <input type="radio" name="payment-method" value="direct-bank-transfer">Direct Bank Tranfer
-          <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
-          <input type="radio" name="payment-method" value="cash-on-delivery">Cash On Delivery
-          <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
+        <div class="name-row flex-sb">
+          <div class="input-field">
+            <label for="firstname">First Name</label>
+            <input name="firstname" type="text" required>
           </div>
-          <button name="Place-order" value="OK" type="button" onclick="order()">Place order</button>  
+          <div class="input-field">
+            <label for="lastname">Last Name</label>
+            <input name="lastname" type="text" required>
+          </div>
         </div>
-      </form>
-      
-    </div>
+        <div class="input-field">
+          <label for="companyname">Company Name (Optional)</label>
+          <input name="companyname" type="text" placeholder="">
+        </div>
+        <div class="input-field">
+          <label for="Contry">Country/Region</label>
+          <div class="select-wrapper">
+            <select name="country" id="country">
+              <option value="srilanka" selected>Sri Lanka</option>
+              <option value="china">China</option>
+              <option value="australia">Australia</option>
+              <option value="iraq">Iraq</option>
+              <option value="cambodia">Cambodia</option>
+              <option value="vietnam">Viet Nam</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-field">
+          <label for="street-address">Street Address</label>
+          <input name="street-address" type="text" required>
+        </div>
+        <div class="input-field">
+          <label for="town-city">Town / City</label>
+          <input name="town-city" type="text" required>
+        </div>
+        <div class="input-field">
+          <label for="province">Province</label>
+          <div class="select-wrapper">
+            <select name="province" id="province">
+              <option value="western-province" selected>Western Province</option>
+              <option value="shanghai">Shanghai</option>
+              <option value="hanoi">Ha Noi</option>
+              <option value="sydney">Sydney</option>
+              <option value="baghdad">Baghdad</option>
+              <option value="phnom-penh">Phnom Penh</option>
+              <option value="melbourne">Melbourne</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-field">
+          <label for="zipcode">Zip code</label>
+          <input name="zipcode" type="text" required>
+        </div>
+        <div class="input-field">
+          <label for="phone">Phone</label>
+          <input name="phone" type="text" id="phone" required>
+        </div>
+        <div class="input-field">
+          <label for="email">Email address</label>
+          <input name="email" type="text" id="email" required>
+        </div>
+        <div class="input-field">
+          <label for="additional-info"></label>
+          <input name="additional-info" type="text" placeholder="Additional information">
+        </div>
+      </div>
+
+      <div class="form-right">
+        <table class="cart-table"></table>
+        <hr>
+        <div class="payment-method flex-col">
+          <div>
+            <input type="radio" name="payment-method" id="dbt" value="direct-bank-transfer" checked>
+            <label for="dbt">Direct Bank Tranfer</label>
+            <p class="txt-caption txt-w-300 txt-justify">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+          </div>
+          <div>
+            <input type="radio" name="payment-method" id="cod" value="cash-on-delivery">
+            <label for="cod">Cash On Delivery</label>
+            <p class="txt-caption txt-w-300 txt-justify">Make your payment as
+              your order arrives. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+          </div>
+        </div>
+        <hr>
+        <p class="italic txt-justify txt-w-300" style="margin-top: 30px;
+        margin-bottom: 25px">Your personal data will be used to support
+          your experience throughout this website, to manage access to your
+          account, and for other purposes described in our <span
+            class="txt-w-600">privacy policy.</span></p>
+        <div class="flex-center">
+          <button type="submit">Place order</button>
+        </div>
+      </div>
+    </form>
+    <policies-component></policies-component>
     <!--Must import footer.js for this to work-->
     <footer-component></footer-component>
   </body>

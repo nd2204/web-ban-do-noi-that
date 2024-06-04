@@ -72,6 +72,7 @@ sup {
   background-color: #FAF4F4;
   padding: 51px 93px 59px 100px;
   height: 562px;
+  overflow: hidden;
 }
 
 .sidetable-ctn {
@@ -98,6 +99,7 @@ sup {
   flex-direction: column;
   align-items: center;
   min-height: 777px;
+  overflow: hidden;
 }
 
 .toppick-ctn .products-view {
@@ -125,6 +127,7 @@ sup {
   height: 100%;
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
 }
 
 .new-arrivals-title-ctn {
@@ -171,6 +174,7 @@ sup {
   max-height: 944px;
   flex-direction: column;
   align-items: center;
+  overflow-x: scroll;
 }
 
 .blogs-view {

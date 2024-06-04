@@ -12,27 +12,6 @@ form {
 form .title {
   display: block;
 }
-
-.input-field label,
-.input-field input {
-  display: block;
-}
-
-.input-field label{
-  font-weight: 500;
-  font-size: 16;
-  margin-bottom: 22px;
-}
-
-.input-field input {
-  border: 1px solid #9F9F9F;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 30px;
-  height: 75px;
-  border-radius: 10px;
-}
-
 .check-box {
   margin-left: 0;
   margin-right: 21px;
@@ -72,16 +51,11 @@ button[type="submit"] {
   cursor: pointer;
   font-size: 20px;
 }
+
 button[type="submit"]:hover {
   background: #000000;
   color: white;
   transition: 0.15s ease;
-}
-
-.flex-input {
-  display: flex;
-  flex-direction: column;
-  row-gap: 36px;
 }
 
 .info p {
