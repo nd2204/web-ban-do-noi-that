@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
       g_cart.register_cart_subtotal(s)
     });
   }
-
 })
 
 function renderItems(container) {

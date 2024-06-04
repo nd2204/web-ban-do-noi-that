@@ -1,0 +1,136 @@
+form {
+  padding: 63px 100px 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 36px;
+}
+
+.form-left {
+  max-width: 453px;
+  padding: 35px 79px 71px 76px;
+  flex-shrink: 0;
+}
+
+.name-row {
+  width: 100%;
+  column-gap: 30px;
+}
+
+.form-right {
+  box-sizing: border-box;
+  max-width: 608px;
+  padding: 87px 37px 110px 38px;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 40px;
+}
+
+.select-wrapper::after {
+  content: url('../assets/icons/arrow.svg');
+  rotate: 90deg;
+  font-size: 1rem;
+  top: 0;
+  bottom: 0;
+  right: 65px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.input-field select {
+  color: #9F9F9F;
+}
+
+.payment-method {
+  row-gap: 14px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+
+table {
+  width: 100%;
+  padding-bottom: 33px;
+}
+
+tr td:first-child, tr th:first-child {
+  text-align: left;
+}
+
+tr:not(:first-child):not(:last-child) td:last-child {
+  font-weight: 300;
+}
+
+tr td:last-child, tr th:last-child {
+  text-align: right;
+}
+
+table tr:nth-child(2) td {
+  padding-top: 14px;
+}
+
+table tr:not(:nth-child(2) ) td {
+  padding-top: 16px;
+}
+
+hr {
+  color: #D9D9D9
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 1px solid #9F9F9F;
+  height: 14px;
+  width: 14px;
+  border-radius: 7px;
+  margin: 0;
+}
+
+input[type="radio"]:checked {
+  background-color: black
+}
+
+input[type="radio"] + label + p {
+  margin-top: 11px;
+}
+
+input[type="radio"] + label {
+  font-weight: 500;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+input[type="radio"]:not(:checked) + label {
+  color: #9F9F9F;
+}
+
+input[type="radio"]:not(:checked) + label + p {
+  display: none;
+}
+
+button[type="submit"] {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 215px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #00000000;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button[type="submit"]:hover {
+  background: #000000;
+  color: white;
+  transition: 0.15s ease;
+}

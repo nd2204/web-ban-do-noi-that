@@ -384,3 +384,4 @@ window.addEventListener("DOMContentLoaded", function(event) {
     cartToggler.addEventListener("click", toggleCart);
   }
 })
+

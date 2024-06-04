@@ -10,10 +10,6 @@ input[type=number]::-webkit-outer-spin-button {
   color: black;
 }
 
-.txt-center {
-  text-align: center;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -34,6 +30,8 @@ p {
   margin-inline-end: 0px;
 }
 
+.txt-s-12 { font-size: 12px; }
+.txt-s-14 { font-size: 12px; }
 .txt-s-16 { font-size: 16px; }
 .txt-s-20 { font-size: 20px; }
 .txt-s-24 { font-size: 24px; }
@@ -55,6 +53,10 @@ p {
 .txt-w-900 { font-weight: 900; }
 
 .txt-caption { color: #9F9F9F; }
+.italic { font-style: italic; }
+.txt-center { text-align: center; }
+.txt-justify { text-align: justify; }
+
 
 .block { display: block; }
 
@@ -103,3 +105,4 @@ p {
 }
 
 .inline { display: inline }
+

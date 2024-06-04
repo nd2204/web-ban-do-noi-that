@@ -16,8 +16,3 @@
 
 ### Link Figma
 [Link](https://www.figma.com/file/YS1uGdJCB9SmyXOKrqURhh/Furniture-Shop---Freebie-(Community)?type=design&node-id=0-1&mode=design&t=aFvD84REuzVt80x5-0)
-
-***
-
-### Screenshot
-TODO
