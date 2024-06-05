@@ -98,8 +98,14 @@ function generatePageCount(opts, container) {
 
   if (opts.page == 1) prev_btn.classList.add("hide");
   else prev_btn.classList.remove("hide")
+  prev_btn.addEventListener("click", () => {
+    location.href = getLink(opts).replace(/page=[0-9]*/, `page=${queries.page - 1}`)
+  })
   if (opts.page == calculatePageCount(opts)) next_btn.classList.add("hide");
   else next_btn.classList.remove("hide");
+  next_btn.addEventListener("click", () => {
+    location.href = getLink(opts).replace(/page=[0-9]*/, `page=${queries.page + 1}`)
+  })
 }
 
 function display_product(opts) {
