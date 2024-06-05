@@ -4,26 +4,6 @@
   row-gap: 36px;
 }
 
-.input-field input {
-  border: 1px solid #9F9F9F;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 30px;
-  height: 75px;
-  border-radius: 10px;
-}
-
-.input-field label,
-.input-field input {
-  display: block;
-}
-
-.input-field label{
-  font-weight: 500;
-  font-size: 16;
-  margin-bottom: 22px;
-}
-
 input, textarea {
   border: 1px solid #9F9F9F;
 }

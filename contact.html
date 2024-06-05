@@ -1,14 +1,16 @@
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>Contact</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/contact.css">
-    <title>Contact</title>
+    <link rel="stylesheet" href="./css/form.css">
     <script type="module" src="scripts/header.js"></script>
     <script type="module" src="scripts/footer.js"></script>
     <script type="module" src="scripts/policies.js"></script>
+    <script type="module" src="scripts/contact.js"></script>
   </head>
   <body>
     <!--Must import header.js for this to work-->
@@ -58,11 +60,11 @@
           <div class="input-flex">
             <div class="input-field">
               <label for="name">Your name</label>
-              <input name="name" type="text" placeholder="Abc">
+              <input name="name" type="text" placeholder="Abc" required>
             </div>
             <div class="input-field">
               <label for="email">Email Address</label>
-              <input name="email" type="text" placeholder="Abc@def.com">
+              <input name="email" id="email" type="text" placeholder="Abc@def.com" required>
             </div>
             <div class="input-field">
               <label for="subject">Subject</label>
@@ -70,7 +72,7 @@
             </div>
             <div class="input-field">
               <label for="message">Message</label>
-              <textarea name="message" id="message" placeholder="Hi! i’d like to ask about"></textarea>
+              <textarea name="message" id="message" placeholder="Hi! i’d like to ask about" required></textarea>
             </div>
             <button type="submit">Submit</button>
           </div>
